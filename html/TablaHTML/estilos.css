@@ -1,0 +1,42 @@
+thead{
+	background-color: #3333ff;
+	color: #ffffff;
+	text-align: center;
+}
+
+tfoot{
+    background-color: #a0ff9b;
+    text-align: center;
+}
+
+table {
+	border: groove 5px;
+	border-spacing: 2px;
+	margin: 0 auto;
+}
+
+td{
+	border: solid 1px;
+	
+}
+
+.diasSemana{
+	font-weight: bold;	
+}
+
+.descanso{
+	background-color: #ff5b5b;
+}
+
+.tablaInterna{
+	width: 100%;
+	text-align: center;
+}
+
+.horas{
+	background-color: #ffff80;
+}
+
+.centrado{
+	text-align: center;
+}
