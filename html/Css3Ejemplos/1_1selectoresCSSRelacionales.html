@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+div b {color:blue}
+div > span {color:blue}
+h3 + p {color:blue}
+h4 ~ p {color:blue}
+</style>
+</head>
+<body>
+<h1 style="text-align:center">Selectores Relacionales</h1>
+<h2>Contextual S1 S2{...}</h2>
+<div>
+  <p>La última palabra se ve en <b>azul</b></p>
+  si en <b>azul</b>
+</div>
+<p>La última palabra no se ve en <b>azul</b></p>
+<hr>
+
+<h2>Hijo S1 > S2{...}</h2>
+<div>
+  <p>La última palabra no se ve en <span>azul</span></p>
+  Aqui si se ve la última palabra en <span>azul</span>
+</div>
+<p>La última palabra no se ve en <span>azul</span></p>
+<hr>
+
+<h2>Hermanos adyacentes S1 + S2{...}</h2>
+<p>Este texto no se ve en azul</p>
+<h3>Este texto no se ve en azul</h3>
+<p>Este texto si se ve en azul</p>
+<p>Este texto no se ve en azul</p>
+<hr>
+
+<h2>Hermanos generales S1 ~ S2{...}</h2>
+<p>Este texto no se ve en azul</p>
+<h4>Este texto no se ve en azul</h4>
+<p>Este texto si se ve en azul</p>
+<p>Este texto si se ve en azul</p>
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="iso-8859-1">
+<title>Transición</title>
+<style>
+body{font-size:10pt}
+div{border:1px solid blue}
+div div{border:1px solid black}
+
+#contenido1{position:absolute;left:50px;top:100px;width:250px;height:400px;
+            background-color:yellow; 
+            -webkit-transition-property:background-color; 
+            -moz-transition-property:background-color; 
+            -o-transition-property:background-color; 
+            transition-property:background-color; 
+            -webkit-transition-duration:0.5s;
+            -moz-transition-duration:0.5s;
+            -o-transition-duration:0.5s;
+            transition-duration:0.5s}
+#contenido1:hover{background-color:red}
+#contenido2{position:absolute;left:350px;top:100px;width:250px;height:400px;
+            background-color:yellow; 
+            -webkit-transition-property:background-color; 
+            -moz-transition-property:background-color; 
+            -o-transition-property:background-color; 
+            transition-property:background-color; 
+            -webkit-transition-duration:0.5s;
+            -moz-transition-duration:0.5s;
+            -o-transition-duration:0.5s;
+            transition-duration:0.5s;
+            -webkit-transition-timing-function:ease-out;
+            -moz-transition-timing-function:ease-out;
+            -o-transition-timing-function:ease-out;
+            transition-timing-function:ease-out;
+            -webkit-transition-delay:0.5s;
+            -moz-transition-delay:0.5s;
+            -o-transition-delay:0.5s;
+            transition-delay:0.5s;
+            }
+#contenido2:hover{background-color:red} 
+#contenido3{position:absolute;left:650px;top:100px;width:250px;height:400px;
+            background-color:yellow;
+            -webkit-transform:rotate(0deg);
+            -moz-transform:rotate(0deg); 
+            -o-transform:rotate(0deg); 
+            -webkit-transition:background-color 0.8s ease-out 0.5s, 
+                               color 0.8s ease-out 0.5s,
+                               -webkit-transform 0.8s ease-out 0.5s;
+            -moz-transition:background-color 0.8s ease-out 0.5s, 
+                               color 0.8s ease-out 0.5s,
+                                -moz-transform 0.8s ease-out 0.5s;
+            -o-transition:background-color 0.8s ease-out 0.5s, 
+                          color 0.8s ease-out 0.5s,
+                          -o-transform 0.8s ease-out 0.5s;
+            transition:background-color 0.8s ease-out 0.5s, 
+                               color 0.8s ease-out 0.5s} 
+#contenido3:hover{background-color:red;color:grey;
+                  -webkit-transform:rotate(30deg);
+                  -moz-transform:rotate(30deg);
+                  -o-transform:rotate(30deg);} 
+</style>
+</head>
+<body>
+<h1>Transformaciones CSS3</h1>
+<div id="contenido1">
+#contenido1:{background-color:yellow; 
+            -webkit-transition-property:background-color;<br>
+            -moz-transition-property:background-color;<br> 
+            -o-transition-property:background-color; <br>
+            transition-property:background-color;<br> 
+            -webkit-transition-duration:0.5s;<br>
+            -moz-transition-duration:0.5s;<br>
+            -o-transition-duration:0.5s;<br>
+            transition-duration:0.5s}<br>
+#contenido1:hover{background-color:red<br>
+</div>
+<div id="contenido2">
+#contenido2{position:absolute;left:350px; top:100px;width:250px;height:400px;<br>
+            background-color:yellow; <br>
+            -webkit-transition-property:background-color; <br>
+            -moz-transition-property:background-color; <br>
+            -o-transition-property:background-color; <br>
+            transition-property:background-color; <br>
+            -webkit-transition-duration:0.5s;<br>
+            -moz-transition-duration:0.5s;<br>
+            -o-transition-duration:0.5s;<br>
+            transition-duration:0.5s;<br>
+            webkit-transition-timing-function:ease-out;<br>
+            -moz-transition-timing-function:ease-out;<br>
+            -o-transition-timing-function:ease-out;<br>
+            transition-timing-function:ease-out;<br>
+            -webkit-transition-delay:0.5s;<br>
+            -moz-transition-delay:0.5s;<br>
+            -o-transition-delay:0.5s;<br>
+            transition--delay:0.5s;<br>
+            }
+#contenido2:hover{background-color:red} 
+</div>
+<div id="contenido3">
+-o-transform:rotate(30deg);
+        -moz-transform:rotate(30deg);
+        -ms-transform:rotate(30deg);
+        -webkit-transform:rotate(30deg)
+</div>
+</body>
+</html>

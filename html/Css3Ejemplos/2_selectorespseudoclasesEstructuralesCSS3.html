@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pseudoclases Estructurales de formularios</title>
+<style>
+   :root{color:red; font-size:24pt}
+   #primero{position:absolute;left:3px;top:50px;color:black; 
+            font-size:12pt;border:1px solid black;width:550px}
+   #primero p:nth-child(3){color:blue; font-size:16pt}
+   #primero p:nth-child(6n+2){color:green; font-size:16pt}
+   #primero p:nth-last-child(6){color:orange; font-size:16pt}
+   #primero p:first-child{color:yellow; font-size:16pt}
+   #primero p:nth-of-type(5){color:grey; font-size:16pt}
+   #primero p:nth-last-of-type(5){color:red; font-size:16pt}
+   #primero p:last-child{color:magenta; font-size:16pt}
+   #primero h4:first-of-type{color:pink; font-size:16pt}
+   #primero p:last-of-type{color:maroon; font-size:16pt}
+   #segundo{position:absolute;left:560px;top:50px;color:black; 
+            font-size:12pt;border:1px solid black;width:550px}
+   p:only-child{color:blue; font-size:16pt}    
+   #tercero{position:absolute;left:560px;top:150px;color:black; 
+            font-size:12pt;border:1px solid black;width:550px}    
+   
+   #tercero *:only-of-type{color:green; font-size:16pt}
+   #tercero *:empty{background-color:orange;width:100px;height:20px}
+   #cuarto{position:absolute;left:560px;top:650px;color:black; 
+            font-size:12pt;border:1px solid black;width:550px} 
+     
+   /* Otros selectores*/  
+   #tercero h2:lang(es){color:magenta; font-size:16pt}
+   input{color:red}
+   input:not([type="submit"]) {
+	     color:green}
+   *:selection{font-color:blue}
+</style>
+</head>
+<body>
+  Esta en rojo por :root{color:red; font-size:24pt}
+  <div id ="primero">
+   <p>uno: #primero p:first-child{color:yellow; font-size:16pt}</p>
+   <p>dos: #primero p:nth-child(6n+2){color:green; font-size:16pt}</p>
+   <p>tres: #primero p:nth-child(3){color:blue; font-size:16pt}</p>
+   <p>cuarto</p>
+   <p>cinco: #primero p:nth-of-type(5){color:grey; font-size:16pt}</p>
+   <p>seis</p>
+   <p>siete: </p>
+   <p>ocho: #primero p:nth-child(6n+2){color:green; font-size:16pt}</p>
+   <p>nueve</p>
+   <p>diez</p>
+   <p>once: primero p:nth-last-of-type(5){color:red; font-size:16pt}</p>
+   <p>doce: #primero p:nth-last-child(6){color:orange; font-size:16pt}</p>
+   <p>trece:   </p>
+   <p>catorce:#primero p:nth-child(6n+2){color:green; font-size:16pt}</p>
+   <p>quince: #primero p:last-of-type{color:maroon; font-size:16pt}</p>
+   <h4>Primer H4: #primero h3:first-of-type{color:pink; font-size:16pt}</h4>
+   <h4>h4</h4>
+  </div>
+  <div id ="segundo">
+  <p>#p:only-child{color:blue; font-size:16pt} </p>
+  </div>
+  <div id ="tercero">
+  <h2>h2</h2>
+  <h2 lang="es">#tercero h2:lang(es){color:magenta; font-size:16pt}</h2>
+  <p>p:#tercero *:only-of-type{color:green; font-size:16pt}</p>
+  <h3>h3:#tercero *:only-of-type{color:green; font-size:16pt}</h3>
+  <h4>h4</h4>
+  <h4>h4</h4>
+  <h4></h4>
+  <hr>
+  <h2></h2>
+  </div>
+  <div id ="cuarto">
+  <form id="comments_form" action="" method="post">
+	<fieldset>
+		<p>
+			<label for="name">Nombre: </label>
+			<input name="nombre" value="" type="text" id="name" />
+		</p>
+		<p>
+			<label for="surname">Apellido: </label>
+			<input name="apellido" value="" type="text" id="surname" />
+		</p>
+		<p>
+			<label for="phone">Teléfono: </label>
+			<input name="telefono" value="" type="text" id="phone" />
+		</p>
+		<p>
+			<input type="submit" value="Enviar" />
+		</p>
+		</fieldset>
+  </form>
+  </div>
+</body>
+</html>

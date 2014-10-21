@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="iso-8859-1">
+<title>outline CSS·</title>
+<style>
+div
+{
+border-width:15px;
+width:250px;
+padding:10px 20px;
+}
+
+
+#repeat
+{
+-moz-border-image:url("border.png") 30 30 30 repeat; /* Firefox */
+-webkit-border-image:url("border.png") 30 30 30 repeat; /* Safari and Chrome */
+-o-border-image:url("border.png") 30 30 30 repeat; /* Opera */
+border-image:url("border.png") 30 30 30 repeat;
+}
+
+#stretch
+{
+-moz-border-image:url("border.png") 30 30 30 stretch; /* Firefox */
+-webkit-border-image:url("border.png") 30 30 30 stretch; /* Safari and Chrome */
+-o-border-image:url("border.png") 30 30 30 stretch; /* Opera */
+border-image:url("border.png") 30 30 30 stretch;
+}
+
+#round
+{
+-moz-border-image:url("border.png") 430 30 30 round; /* Firefox */
+-webkit-border-image:url("border.png") 30 30 30 round; /* Safari and Chrome */
+-o-border-image:url("border.png") 30 30 30 round; /* Opera */
+border-image:url("border.png") 30 30 30 round;
+}
+
+</style>
+</head>
+<body>
+
+<p>Here is the image used:</p>
+<img src="border.png">
+<hr>
+<div id="repeat">Here, the image is tiled <b>(repeated)</b> to fill the area.</div>
+<br>
+<div id="stretch">Here, the image is <b>stretched</b> to fill the area.</div>
+<br>
+<div id="round">Here, the image is <b>round</b> to fill the area.</div>
+
+
+
+</body>
+</html>
+

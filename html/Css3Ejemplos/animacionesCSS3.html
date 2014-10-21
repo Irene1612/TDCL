@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="iso-8859-1">
+<title>Animación</title>
+<style>
+
+@-webkit-keyframes resize {
+	0% {
+		padding: 0;
+	}
+	50% {
+		padding: 0 20px;
+		background-color:rgba(255,0,0,0.2);		
+	}
+	100% {
+		padding: 0 100px;
+		background-color:rgba(255,0,0,0.9);
+	}
+}
+@-moz-keyframes resize {
+	0% {
+		padding: 0;
+	}
+	50% {
+		padding: 0 20px;
+		background-color:rgba(255,0,0,0.2);		
+	}
+	100% {
+		padding: 0 100px;
+		background-color:rgba(255,0,0,0.9);
+	}
+}
+@-ms-keyframes resize {
+	0% {
+		padding: 0;
+	}
+	50% {
+		padding: 0 20px;
+		background-color:rgba(255,0,0,0.2);		
+	}
+	100% {
+		padding: 0 100px;
+		background-color:rgba(255,0,0,0.9);
+	}
+}
+
+@-o-keyframes resize {
+	0% {
+		padding: 0;
+	}
+	50% {
+		padding: 0 20px;
+		background-color:rgba(255,0,0,0.2);		
+	}
+	100% {
+		padding: 0 100px;
+		background-color:rgba(255,0,0,0.9);
+	}
+}
+
+
+ #div1 {
+	height:50px;
+	width:50px;
+	margin:0 auto;
+	border:1px red solid;
+	background-color:rgba(255,0,0,0.7);
+}
+
+#div1:hover{
+	-webkit-animation-name: resize;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 4;
+	-webkit-animation-direction: alternate;	
+	
+	-moz-animation-name: resize;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: 4;
+	-moz-animation-direction: alternate;	
+	
+	-ms-animation-name: resize;
+	-ms-animation-duration: 1s;
+	-ms-animation-iteration-count: 4;
+	-ms-animation-direction: alternate;	
+  
+  -o-animation-name: resize;
+	-o-animation-duration: 1s;
+	-o-animation-iteration-count: 4;
+	-o-animation-direction: alternate;	
+}
+</style>
+</head>
+<body>
+<h1>Animaciones CSS3</h1>
+<div id="div1">
+</div>
+</body>
+</html>

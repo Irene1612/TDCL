@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<title>Formulario</title>
+<meta charset="iso-8859-1">
+</head>
+<body onload="document.getElementById('salida').value='Rellenado con JavaScript'">
+<h1>Formulario HTML5</h1>
+<form>
+  <fieldset><legend>Tipos de input de HTML4</legend>
+    <label for="No_Vacio">Campo no vacio:</label>
+    <input type="text" name="campo1" id="No_Vacio" required="required" placeholder="Campo no vacio"><br>
+
+    <label for="numerico">Campo Numérico:</label>
+    <input type="text" name="campo2" id="numerico" required placeholder="Campo númerido" pattern="\d{1,}" readonly><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="contrasenia" id="password" required placeholder="Contraseña"><br>
+
+    <label for="radiobutton">RadioButton:</label>
+    <input type="radio" name="sexo" id="radiobutton" value="varon" required>
+    <input type="radio" name="sexo" value="hembra" required><br>
+
+    <label for="checkbox">Checkbox:</label>
+    <input type="checkbox" name="ingles" id="checkbox" value="ingles">
+    <input type="checkbox" name="frances" value="frances" required><br>
+    
+    <label for="file">File:</label>
+    <input type="file" name="fichero" id="file"><br>
+  
+    <input type="hidden" name="oculto" value="oculto">
+
+    <input type="submit" value="submit">
+    <input type="reset" value="reset">
+    <input type="button" value="button">
+    <input type="image" width="60" height="18" alt="enviar" src="Enviar.jpg">
+
+  </fieldset><br>
+  
+  <fieldset><legend>TextArea</legend>
+
+    <label for="textarea">Textarea:</label>
+    <textarea name="areadetexto" id="textarea" required placeholder="área de texto"></textarea><br>
+  </fieldset><br>
+  
+  <fieldset><legend>Select</legend>
+    <label for="select">Select:</label>
+    <select id="select" name="listadesplegable">
+      <optgroup label="activos">
+      <option value="deportes">deportes</option>
+      <option value="cine">cine</option>
+      </optgroup>
+      <optgroup label="pasivos">
+      <option value="Televisión">televisión</option>
+      </optgroup>
+    </select><br>
+
+  </fieldset><br>
+  
+  <fieldset><legend>Nuevos tipos de input en HTML5</legend>
+     
+     <label for="search">Search:</label>
+     <input type="search" id="search" name="busqueda"><br>
+
+     <label for="email">Email:</label>
+     <input type="email" id="email" name="correo"><br>
+    
+     <label for="recurso">URL:</label>
+     <input type="url" id="recurso" name="url"><br>
+
+     <label for="tel">Tel:</label>
+     <input type="tel" id="tel" name="telefono"><br>
+     
+     <label for="number">Number</label>
+     <input type="number" id="number" name="numero" min="1.5" max="5.5" step="0.3"><br>
+
+     <label for="range">Range</label>
+     <input type="range" id="range" name="cumplimiento" min="1" max="10" step="2"><br>
+
+     <label for="color">Color</label>
+     <input type="color" id="color" value="#AA1177" name="color"><br>
+      
+     <label for="date">Date</label>
+     <input type="date" id="date" name="fecha" value="2011-07-24" 
+            min="2011-07-23" max="2011-08-24" step="10"><br>
+            
+     <label for="month">Month</label>
+     <input type="month" id="month" name="mes" value="2011-07" 
+            min="2011-08" max="2011-12" step="2"><br>
+            
+     <label for="week">Week</label>
+     <input type="week" id="week" name="semana" value="2012-W08" 
+            min="2011-W40" max="2012-W20" step="10"><br>
+
+     <label for="datetime">Datetime</label>
+     <input type="datetime" id="datetime" name="fechayhora" value="2011-07-24T12:12:00-05:00" 
+            min="2011-07-24T12:12:00-05:00" max="2011-07-24T12:12:00-05:00" step="100"><br>
+
+     <label for="datetime-local">Datetime-local</label>
+     <input type="datetime-local" id="datetime-local" name="fechayhora-local"
+            value="2011-07-24T12:12:12" min="2011-07-24T12:12:12" max="2012-07-24T12:12:12" 
+            step="100"><br>
+
+  </fieldset><br> 
+
+  
+  
+  <fieldset><legend>Controles nuevos de HTML5</legend> 
+    <label for="keygen">Keygen:</label>
+    <keygen id="keygen" name="clave" challenge="info" keytype="rsa"><br>
+    <label for="salida">Output:</label>
+    <output id="salida"></output>
+  </fieldset><br>
+  
+    
+  <fieldset><legend>Button</legend>
+
+  <button type="submit" name="uno">submit</button>
+  <button type="reset">reset</button>
+  <button type="button">button</button><br>
+  
+  </fieldset><br>
+   
+</form>
+ <h1>Fuera de formularios</h1>
+  meter : <meter min="0" low="40" high="90" max="100" value="95"></meter><br>
+  progress : <progress id="p" value=50 max=100><span>5</span>%</progress></body>
+</html>

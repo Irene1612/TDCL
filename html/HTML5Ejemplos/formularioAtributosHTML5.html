@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<title>Formulario</title>
+<meta charset="iso-8859-1">
+<style>
+  legend h4{color:blue;font-size:20pt}
+</style>
+</head>
+<body>
+<h1>Atributos de controles nuevos de HTML5</h1>
+  
+  
+  <form>
+  <fieldset><legend>placeholder</legend>
+    <label for="name1">Nombre:</label>
+    <input type="text" name="nombre" id="name1" required placeholder="Nombre, apellidos"><br>
+    <label for="textarea1">Textarea:</label>
+    <textarea name="areadetexto" id="textarea1" placeholder="Introduce tus comentarios"></textarea><br>
+    <label for="email1">Email:</label>
+     <input type="email" id="email1" name="correo" placeholder="correo electrónico"><br>
+    <button type="submit">enviar</button>
+  </fieldset><br>  
+  </form>
+  
+  <form>
+  <fieldset><legend>pattern</legend>
+    <label for="number1">Número de 2 digitos:</label>
+    <input type="text" name="numero" id="number1" pattern="\d\d" placeholder="\d\d"><br>
+    
+    <label for="email2">Email:</label>
+     <input type="email" id="email2" name="correo" pattern="\d"><br>
+    <button type="submit">enviar</button>
+  </fieldset><br>  
+  </form>
+  
+  <form>
+  <fieldset disabled><legend>disabled y readonly</legend>
+    <label for="campo31">Normal</label>
+    <input type="text" name="normal1" id="campo31"><br>
+    <label for="campo32">Disabled</label>
+    <input type="text" name="disabled1" id="campo32"  value="disabled" disabled><br>
+    <label for="campo33">Readonly</label>
+    <input type="text" name="readonly1" id="campo33" value="readonly" readonly><br>
+    <button type="submit">enviar</button>
+  </fieldset><br>  
+  </form>
+  
+  <form>
+  <fieldset><legend>multiple</legend>
+    <label for="email4">Email:</label>
+    <input type="email" id="email4" name="correo" multiple><br>
+    <label for="file4">File:</label>
+    <input type="file" name="fichero" id="file4" multiple><br>
+    <button type="submit">enviar</button>
+  </fieldset><br>  
+  </form>
+
+  <form>
+  <fieldset><legend>autocomplete</legend>
+    <label for="campo51">Autocomplete on</label>
+    <input type="text" name="normal51" id="campo51" autocomplete="on"><br>
+    <label for="campo52">Autocomplete off</label>
+    <input type="text" name="normal51" id="campo52" autocomplete="off"><br>
+    <button type="submit">enviar</button>
+  </fieldset><br>  
+  </form>
+  
+  <form>
+  <fieldset><legend>autofocus</legend>
+    <label for="control51">Sin foco</label>
+    <input type="text" name="campocontrol51" id="control51"><br>
+    <label for="control52">Autofocus</label>
+    <input type="text" name="campocontrol51" id="control52" autofocus><br>
+    <button type="submit">enviar</button>
+  </fieldset><br>  
+  </form>
+  
+  <form>
+  <fieldset><legend>list</legend>
+    <label for="campo61">ciudades:</label>
+    <input type="text" name="normal61" id="campo61" list="ciudades"><br>
+      
+    <datalist id="ciudades">
+      <option value="Madrid">
+      <option value="Barcelona">
+      <option value="Valencia">
+    </datalist>
+    
+    <button type="submit">enviar</button>
+  </fieldset><br>  
+  </form>
+  
+  <form>
+  <fieldset><legend>wrap de Textarea</legend>
+    <label for="textarea">Textarea:</label>
+    <textarea name="areadetexto" id="textarea" rows=4 cols=25 wrap="hard">Este contenido incluye 
+saltos de línea generados por el Navegador
+    </textarea><br>
+    
+    <button type="submit">enviar</button>
+  </fieldset><br>  
+  </form>
+<div style="border:1px solid gray"> 
+  <h4 style="text-align:center">Atributo form</h4> 
+  <form id="formularioanterior">
+    <label for="campo71">Elemento 1</label>
+    <input type="text" name="normal71" id="campo71"><br>
+    <button type="submit">enviar formulario 1</button>
+  </form>
+  <hr>
+  <form>
+     <label for="campo81">Elemento de formulario de fuera</label>
+    <input type="text" name="normal81" id="campo81" form="formularioanterior"><br>
+    <label for="campo91">Elemento de este formulario</label>
+    <input type="text" name="normal91" id="campo91"><br>
+    <button type="submit">enviar formulario 2</button>
+  </form>
+</div>
+<div>
+   <form>
+     <label for="campo101">Elemento de formulario con atributo dirname</label>
+    <input type="text" name="normal101" id="campo101" dirname="campocondir"><br>
+    <button type="submit">enviar formulario </button>
+  </form>
+</div>
+</body>
+</html>

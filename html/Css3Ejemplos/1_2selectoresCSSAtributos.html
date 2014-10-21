@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+p[id]{color:blue}
+p[align=left]{color:blue}
+p[lang|=en]{color:blue}
+p[title~=azul]{color:blue}
+p[title^=principio]{color:blue}
+p[title$=final]{color:blue}
+p[title*=cadena]{color:blue}
+</style>
+</head>
+<body>
+<h1 style="text-align:center">Selectores de atributos</h1>
+<h2>p[id]{color:blue}</h2>
+<p>Párrafo que no aplica ninguna regla de estilo</p>
+<p id="parrafo">Este párrafo aplica la regla CSS p[id]{color:blue}</p>
+<hr>
+
+<h2>p[align=left]{color:blue}</h2>
+<p align="justify">Párrafo que no aplica ninguna regla de estilo</p>
+<p align="left">Este párrafo aplica la regla CSS p[align=left]{color:blue}</p>
+<hr>
+
+<h2>p[lang|=en]{color:blue}</h2>
+<p lang="aa-en">Párrafo que no aplica ninguna regla de estilo</p>
+<p lang="en-us">Este párrafo aplica la regla CSS p[lang|=en]{color:blue}</p>
+Matches any E element whose "lang" attribute has a hyphen-separated list of values beginning (from the left) with "en"
+<hr>
+
+<h2>p[title~=azul]{color:blue}</h2>
+<p title="azulado">Párrafo que no aplica ninguna regla de estilo</p>
+<p title="texto de color azul">Este párrafo aplica la regla CSS p[title~=azul]{color:blue}</p>
+<hr>
+
+<h2>p[title^=principio]{color:blue}</h2>
+<p title="no en principio">Párrafo que no aplica ninguna regla de estilo</p>
+<p title="principio si">Este párrafo aplica la regla CSS p[title^=principio]{color:blue}</p>
+<hr>
+
+<h2>p[title$=final]{color:blue}</h2>
+<p title="final no">Párrafo que no aplica ninguna regla de estilo</p>
+<p title="si en final">Este párrafo aplica la regla CSS p[title$=final]{color:blue}</p>
+<hr>
+
+<h2>p[title*=cadena]{color:blue}</h2>
+<p title="ca dena no">Párrafo que no aplica ninguna regla de estilo</p>
+<p title="encadenado si">Este párrafo aplica la regla CSS p[title*=cadena]{color:blue}</p>
+<hr>
+
+</body>
+</html>

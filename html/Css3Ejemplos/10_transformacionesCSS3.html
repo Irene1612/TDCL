@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="iso-8859-1">
+<title>Background CSS3</title>
+<style>
+body{font-size:10pt}
+div{border:1px solid blue}
+div div{border:1px solid black}
+#translation1{-o-transform:translate(20px, 20px);
+              -moz-transform:translate(20px, 20px);
+              -ms-transform:translate(20px, 20px);
+              -webkit-transform:translate(20px, 20px);}
+#translation2{-o-transform:translatex(-30px);
+              -moz-transform:translatex(-30px);
+              -ms-transform:translatex(-30px);
+              -webkit-transform:translatex(-30px);}
+              
+#scale1{-o-transform:scale(1.2, 1.2);
+        -moz-transform:scale(1.2, 1.2);
+        -ms-transform:scale(1.2, 1.2);
+        -webkit-transform:scale(1.2, 1.2);
+              }
+#scale2{-o-transform:scalex(0.7);
+        -moz-transform:scalex(0.7);
+        -ms-transform:scalex(0.7);
+        -webkit-transform:scalex(0.7);
+              }
+#rotate1{-o-transform:rotate(30deg);
+        -moz-transform:rotate(30deg);
+        -ms-transform:rotate(30deg);
+        -webkit-transform:rotate(30deg);
+              }
+#skew1{-o-transform:skew(15deg, 5deg);
+        -moz-transform:skew(15deg, 5deg);
+        -ms-transform:skew(15deg, 5deg);
+        -webkit-transform:skew(15deg, 5deg);
+              }
+#skew2{-o-transform:skewy(15deg);
+        -moz-transform:skewx(15deg);
+        -ms-transform:skewy(15deg);
+        -webkit-transform:skewy(15deg);
+              }    
+                      
+#transform_origin1{-webkit-transform-origin:0 0;
+                   -moz-transform-origin:0 0;
+                   -o-transform-origin:0 0;
+                   transform-origin:0 0;
+                   -o-transform:rotate(30deg);
+                   -moz-transform:rotate(30deg);
+                   -ms-transform:rotate(30deg);
+                   -webkit-transform:rotate(30deg);
+              }     
+#contenido1{position:absolute;left:50px;top:100px;width:250px;height:400px}
+#contenido2{position:absolute;left:350px;top:100px;width:250px;height:400px} 
+#contenido3{position:absolute;left:650px;top:100px;width:250px;height:400px}
+#contenido4{position:absolute;left:950px;top:100px;width:250px;height:400px}
+#contenido5{position:absolute;left:50px;top:510px;width:250px;height:200px}
+h1{text-align:center}
+</style>
+</head>
+<body>
+<h1>Transformaciones CSS3</h1>
+<div id="contenido1">
+  <h1>Translación</h1>
+  <div id="translation1">-o-transform:translate(20px, 20px);<br>
+                         -moz-transform:translate(20px, 20px);<br>
+                         -ms-transform:translate(20px, 20px);<br>
+                         -webkit-transform:translate(20px, 20px);<br>
+                         <br>
+  </div>
+  <div id="translation2">-o-transform:translatex(-30px);<br>
+                         -moz-transform:translatex(-30px);<br>
+                         -ms-transform:translatex(-30px);<br>
+                         -webkit-transform:translatex(-30px);}</div>
+</div>
+<div id="contenido2">
+  <h1>Escalado</h1>
+  <div id="scale1">-o-transform:scale(1.2 1.2);<br>
+                   -moz-transform:scale(1.2 1.2);<br>
+                   -ms-transform:scale(1.2 1.2);<br>
+                   -webkit-transform:scale(1.2 1.2);<br>
+                         <br>
+  </div>
+  
+  <div id="scale2">-o-transform:scale(0.7);<br>
+                   -moz-transform:scale(0.7);<br>
+                   -ms-transform:scale(0.7);<br>
+                   -webkit-transform:scale(0.7);<br>
+                         <br>
+  </div>
+</div>
+
+<div id="contenido3">
+   <h1>Rotación</h1>
+   <div id="rotate1">-o-transform:rotate(30dg);<br>
+                     -moz-transform:rotate(30dg);<br>
+                     -ms-transform:rotate(30dg);<br>
+                     -webkit-transform:rotate(30dg);<br>
+                         <br>
+  </div>
+
+</div>
+
+<div id="contenido4">
+  <h1>Skew:Desalineamiento</h1>
+   <div id="skew1">-o-transform:skew(15deg, 5deg);<br>
+        -moz-transform:skew(15deg, 5deg);<br>
+        -ms-transform:skew(15deg, 5deg);<br>
+        -webkit-transform:skew(15deg, 5deg);<br>
+                         <br>
+  </div>
+  <div id="skew2">-o-transform:skewy(15deg); <br>
+        -moz-transform:skewy(15deg); <br>
+        -ms-transform:skewy(15deg); <br>
+        -webkit-transform:skewy(15deg); <br>
+                         <br>
+  </div>
+
+</div>
+<div id="contenido5">
+  <h1>transform-origin</h1>
+   
+  <div id="transform_origin1">--webkit-transform-origin:0 0;<br>
+                   -moz-transform-origin:0 0;<br>
+                   -o-transform-origin:0 0;<br>
+                   transform-origin:0 0;<br>
+                   -o-transform:rotate(30deg);<br>
+                   -moz-transform:rotate(30deg);<br>
+                   -ms-transform:rotate(30deg);<br>
+                   -webkit-transform:rotate(30deg);<br>
+                         <br>
+  </div>
+
+</div>
+</body>
+</html>

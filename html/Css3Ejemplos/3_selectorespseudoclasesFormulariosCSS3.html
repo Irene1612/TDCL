@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pseudoclases de formularios</title>
+<style>
+   legend{font-size:24pt}
+  
+   #uno input:enabled{background-color:yellow; color:blue; border:1px solid red} 
+   #uno input:disabled{background-color:red; color:blue} 
+   
+   #dos input{background-color:green;color:red; border:10px solid blue;} 
+   
+   #tres input:valid{color:blue}
+   #tres input:invalid{color:red}
+   
+   #cuatro input:optional{color:blue}
+   #cuatro input:required{color:red}
+   
+   #cinco input:in-range{color:blue}
+   #cuatro input:out-of-range{color:red}
+   
+   #seis *:target{color:red}
+</style>
+</head>
+<body>
+  
+  <h1 style="text-align:center">Pseudoclases de formularios</h1>
+<form>  
+  <fieldset id="uno"><legend>input:enabled y input:disabled</legend>
+  campo 1.1: <input type="text" name="campo11" value="campo habilitado"><br>
+  campo 1.2: <input type="text" name="campo12" value="campo deshabilitado" disabled><br>
+  campo 1.3: <input type="radio" name="campo13" value="campo habilitado">
+             <input type="radio" name="campo13" value="campo habilitado">
+             <input type="radio" name="campo13" value="campo deshabilitado" disabled>
+  </fieldset>
+  
+  <fieldset id="dos"><legend>input:checked</legend>
+  
+    campo 2.1:<input type="radio" name="campo21" value="chequeado" checked>
+              <input type="radio" name="campo21" value="no chequeado"><br>
+    campo 2.2:<input type="checkbox" name="campo22" value="chequeado" checked><br>
+    campo 2.3:<input type="checkbox" name="campo23" value="no chequeado">
+  </fieldset>
+  
+  
+  <fieldset id="tres"><legend>input:valid y input:invalid</legend>
+    <input type="text" name="campo31" value="incorrecto" pattern="\d\d"><br>
+    <input type="text" name="campo32" value="correcto" pattern="correcto"><br>
+  </fieldset>
+  
+  <fieldset id="cuatro"><legend>input:optional y input:required</legend>
+    <input type="text" name="campo41" value="obligatorio" required><br>
+    <input type="text" name="campo42" value="opcional"><br>
+  </fieldset>
+  
+  <fieldset id="cinco"><legend>input:in-range y input:out-of-range</legend>
+    in-range:<input type="range" name="campo51" value="1" min=1 max=100><br>
+    out-of-range:<input type="range" name="campo52" value="150" min=1 max=100><br>
+  </fieldset>
+  
+  <fieldset id="seis"><legend></legend>
+    <a href="#salto">salto</a><br><br><br><br>
+    <a name="salto">destino</a>
+  </fieldset>
+    
+</form>
+</body>
+</html>

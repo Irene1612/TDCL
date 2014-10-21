@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="iso-8859-1">
+<title>Transición</title>
+<style>
+#texto1 { position:absolute; left:300px;top:200px;width:500px;height:300px;border:1px solid blue;
+          color:blue;font-size:12pt;font-family:verdana;background-color:yellow;
+          -webkit-transition-property:font-size, background-color,color, -webkit-transform;
+          -webkit-transition-duration:8s;
+          }
+
+#texto1:hover {font-size:40pt;background-color:blue;color:white;-webkit-transform:rotate(360deg);}
+</style>
+<body>
+<p id='texto1'>Este texto es el que se va a ir transformando poco a poco</p>
+</body>
+</html>

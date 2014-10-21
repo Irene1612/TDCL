@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="iso-8859-1">
+<title>Gradientes</title>
+<style>
+h2{text-align:center;margin:6px}
+p{width:140px; height:140px;margin:4px;border:1px solid black}
+.div1{position:absolute;left:100px;border:1px solid blue}
+.div2{position:absolute;left:300px;border:1px solid green}
+.div3{position:absolute;left:500px;border:1px solid green}
+
+
+#lineargradient1{background-image:-o-linear-gradient(90deg, yellow 0%, blue 100%);
+                 background-image:-moz-linear-gradient(90deg, yellow 0%, blue 100%);
+                 background-image:-webkit-linear-gradient( yellow 0%, blue 100%); 
+                 background-image:-ms-linear-gradient(90deg, yellow 0%, blue 100%);/*no*/} 
+#lineargradient2{background-image:-o-linear-gradient(top left, yellow 0%, blue 100%);
+                 background-image:-moz-linear-gradient(top left, yellow 0%, blue 100%);
+                 background-image:-webkit-linear-gradient(top left, yellow 0%, blue 100%);} 
+#lineargradient3{background-image:-o-linear-gradient(yellow 0%, blue 20%, red 40%, green 95%);
+                 background-image:-moz-linear-gradient(yellow 0%, blue 20%, red 40%, green 95%);
+                 background-image:-webkit-linear-gradient(yellow 0%, blue 20%, red 40%, green 95%);}
+#lineargradient4{background-image:url(gradientelineal.svg)}                                     
+
+#radialgradient1{background-image:-o-radial-gradient(center, ellipse cover, yellow 0%, green 100%);/*no*/
+                 background-image:-moz-radial-gradient(center, ellipse cover, yellow 0%, green 100%);
+                 background-image:-webkit-radial-gradient(center, ellipse cover, yellow 0%, green 100%); 
+                 background-image:-ms-radial-gradient(center, ellipse cover, yellow 0%, green 100%);/*no*/}
+                 
+#radialgradient2{background-image:-o-radial-gradient(20px 30px, contain, red, yellow, green);/*no*/
+                 background-image:-moz-radial-gradient(20px 30px, contain, red, yellow, green);
+                 background-image:-webkit-radial-gradient(20px 30px, contain, red, yellow, green); 
+                 background-image:-ms-radial-gradient(20px 30px, contain, red, yellow, green);}  
+                 
+#radialgradient3{background-image:-o-radial-gradient(20px 30px, 20px 40px, red, yellow, green);/*no*/
+                 background-image:-moz-radial-gradient(20px 30px, 20px 40px, red, yellow, green);/*no*/
+                 background-image:-webkit-radial-gradient(20px 30px, 20px 40px, red, yellow, green); 
+                 background-image:-ms-radial-radial-gradient(20px 30px, 20px 40px, red, yellow, green);/*no*/} 
+                                 
+#repeatinglineargradient1{background-image:-o-repeating-linear-gradient(red 10%, yellow 20%);
+                       background-image:-moz-repeating-linear-gradient(red 10%, yellow 20%);
+                       background-image:-webkit-repeating-linear-gradient(-45deg,red 10px, yellow 40px);                                        
+                       background-image:-ms-repeating-linear-gradient(red 10%, yellow 20%);/*no*/
+}            
+#repeatingradialgradient1{background-image:-o-repeating-radial-gradient(bottom left, circle, red 10%, yellow 20%);/*no*/
+                       background-image:-moz-repeating-radial-gradient(bottom left, circle, red 10%, yellow 20%);
+                       background-image:-webkit-repeating-radial-gradient(bottom left, circle, red 10%, yellow 20%);
+                       background-image:-ms-repeating-radial-gradient(bottom left, circle, red 10%, yellow 20%);/*no*/
+}
+</style>
+</head>
+<body>
+<div class="div1">
+<!--                       background-image:-webkit-repeating-linear-gradient(red 10%, yellow 20%);-->
+<h2>Linear-Gradient</h2>
+<p id="lineargradient1">1</p>
+<p id="lineargradient2">2</p>
+<p id="lineargradient3">3</p>
+<p id="lineargradient4">4</p>
+</div>
+<div class="div2">
+<h2>Radial-Gradient</h2>
+<p id="radialgradient1">1</p>
+<p id="radialgradient2">2</p>
+<p id="radialgradient3">3</p>
+
+</div>
+<div class="div3">
+<h2>Repeat Gradient</h2>
+<p id="repeatinglineargradient1">1</p>
+<p id="repeatingradialgradient1">2</p>
+<p>3</p>
+</div>
+</body>
+</html>

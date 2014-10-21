@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="iso-8859-1">
+<title>Colores en CSS3</title>
+<style>
+h1{text-align:center}
+.div1{position:absolute;left:100px;border:1px solid blue}
+ p, input{width:350px;}
+.div1 p, .div1 input{background-color:orange}
+.box_shadow0{border: 2px solid black; box-shadow:10px 10px 20px 20px rgba(255,0,0,0.5)}
+.box_shadow1{box-shadow:10px 10px 0 0 rgba(100,120,30,0.7)}
+.box_shadow2{box-shadow:inset 10px 10px 0 0 rgba(100,120,30,0.7)}
+.box_shadow3{box-shadow:  rgba(0,0,0,0.4)  10px 10px 0   30px}
+.box_shadow4{box-shadow:  rgba(0,0,0,0.4)  10px 10px 0   10px}
+.box_shadow5{box-shadow:  rgba(0,0,0,0.4)  10px 10px 2px   0}
+.box_shadow6{box-shadow:  rgba(0,0,0,0.4)  10px 10px 6px   0}
+.box_shadow7{box-shadow:  rgba(0,0,0,0.4)  10px 10px 0px   0, rgba(120,10,70,0.4)  15px 15px 0px   0}
+
+
+.div2{position:absolute;left:500px;border:1px solid green}
+.text_shadow1{text-shadow:10px 10px 0 rgba(100,120,30,0.7)}
+.text_shadow2{text-shadow:  rgba(0,0,0,0.4)  10px 10px 0 }
+.text_shadow3{text-shadow:  rgba(0,0,0,0.4)  10px 10px 2px}
+.text_shadow4{text-shadow:  rgba(0,0,0,0.4)  10px 10px 0, rgba(120,10,70,0.4)  15px 15px 0px }
+
+
+</style>
+</head>
+<body>
+<div class="div1">
+<h1>box-shadow</h1>
+<p class="box_shadow0">texto mio<br><br><br><br></p>
+<br><br>
+<p class="box_shadow1">box-shadow:10px 10px 0 0 rgba(100,120,30,0.7)<br><br></p>
+<br>
+<p class="box_shadow2">box-shadow:inset 10px 10px 0 0 rgba(100,120,30,0.7)<br><br></p>
+<br>
+<p class="box_shadow3">box-shadow:  rgba(0,0,0,0.4)  10px 10px 0   30px<br><br></p>
+<br>
+<p class="box_shadow4">box-shadow:  rgba(0,0,0,0.4)  10px 10px 0   10px<br><br></p>
+<br>
+<p class="box_shadow5">box-shadow:  rgba(0,0,0,0.4)  10px 10px 2px   0<br><br></p>
+<br>
+<p class="box_shadow6">box-shadow:  rgba(0,0,0,0.4)  10px 10px 6px   0<br><br></p>
+<br>
+<p class="box_shadow7">box-shadow:  rgba(0,0,0,0.4)  10px 10px 0px   0, <br>rgba(120,10,70,0.4)  15px 15px 0px   0}<br></p>
+<br>
+
+<form>
+  <input type="text" class="box_shadow1" value="box-shadow:10px 10px 0 0 rgba(100,120,30,0.7)"><br><br><br>
+  <input type="text" class="box_shadow2" value="box-shadow:inset 10px 10px 0 0 rgba(100,120,30,0.7)"><br><br><br>
+</form>
+</div>
+
+<div class="div2">
+<h1>text-shadow</h1>
+<p class="text_shadow1">text-shadow:10px 10px 0 rgba(100,120,30,0.7)<br><br></p>
+<br>
+<p class="text_shadow2">text-shadow:  rgba(0,0,0,0.4)  10px 10px 0<br><br></p>
+<br>
+<p class="text_shadow3">text-shadow:  rgba(0,0,0,0.4)  10px 10px 2px}<br><br></p>
+<br>
+<br>
+<p class="text_shadow4">text-shadow:  rgba(0,0,0,0.4)  10px 10px 0, rgba(120,10,70,0.4)  15px 15px 0px<br></p>
+<br>
+<form>
+  <input type="text" class="text_shadow1" value="text-shadow:10px 10px 0 rgba(100,120,30,0.7)"><br><br><br>
+  <input type="text" class="text_shadow2" value="text-shadow:  rgba(0,0,0,0.4)  10px 10px 0"><br><br><br>
+</form>
+</div>
+</body>
+</html>
