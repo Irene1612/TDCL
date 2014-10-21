@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Ejemplo formulario</title>
+</head>
+<body>
+    <h1>Formulario de Datos</h1>
+	<form id="miform" action="http://www.eui.upm.es/~salonso/master/procesa.php" method="get">
+		Nombre:
+		<input type="text" name="nombre" id="nombre" size=10 maxlength=15/><br>
+		Clave:
+		<input type="password" name="clave" id="clave"/><br>	
+		Sexo:
+		<input type="radio" name="sexo" value="H"/>H
+		<input type="radio" name="sexo" value="M"/>M <br>
+		Fichero:
+		<input type="file" name="fichero"/><br>
+		<textarea rows=5 cols=15></textarea><br>
+		<select name="ciudad">
+		      <option value="Madrid" selected="selected">Madrid</option>
+		      <option value="Bilbao">Bilbao</option>
+		      <option value="Barcelona">Barcelona</option>
+		</select><br>
+		<input type="submit" value="Enviar"/>
+		<input type="reset" value="Limpiar"/>
+		<input type="button" value="Saludar" onclick='alert("Holaaaa")'/>
+		<button type="submit"><i>Enviar también</i></button>
+	</form>
+</body>
+</html>

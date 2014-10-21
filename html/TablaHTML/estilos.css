@@ -1,7 +1,7 @@
 thead{
-	background-color: #3333ff;
-	color: #ffffff;
-	text-align: center;
+    background-color: #3333ff;
+    color: #ffffff;
+    text-align: center;
 }
 
 tfoot{
@@ -10,33 +10,33 @@ tfoot{
 }
 
 table {
-	border: groove 5px;
-	border-spacing: 2px;
-	margin: 0 auto;
+    border: groove 5px;
+    border-spacing: 2px;
+    margin: 0 auto;
 }
 
 td{
-	border: solid 1px;
-	
+    border: solid 1px;
+    
 }
 
 .diasSemana{
-	font-weight: bold;	
+    font-weight: bold;  
 }
 
 .descanso{
-	background-color: #ff5b5b;
+    background-color: #ff5b5b;
 }
 
 .tablaInterna{
-	width: 100%;
-	text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 .horas{
-	background-color: #ffff80;
+    background-color: #ffff80;
 }
 
 .centrado{
-	text-align: center;
+    text-align: center;
 }

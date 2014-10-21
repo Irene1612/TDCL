@@ -1,0 +1,64 @@
+body{	
+	background: #fff0f5 url("img/bg-oscars.gif") fixed no-repeat center right;
+}
+
+h1{
+   font-family: Garamond;
+   font-style: italic;
+   font-variant: small-caps;
+   font-size: 24pt;
+   text-transform: capitalize;   
+   text-decoration: overline underline;
+   text-align: center;
+}
+
+h2{
+   font-family: Garamond;
+   font-style: italic;
+   font-variant: small-caps;
+   font-size: 20pt;
+   text-transform: capitalize;   
+   text-decoration: underline;
+   text-align: center;
+   color: #ff9d9d;
+}
+
+h3{
+	background-image: url("img/bg-titulo.gif");
+	font-weight: bold;
+	color: #a4a4a4;
+	font-family: Verdana;
+}
+
+a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #d70000;
+	font-style: normal;
+}
+
+p{
+	text-indent: 25px;
+	font-family: Arial;
+	font-size: 10pt;
+	width: 98%;
+}
+
+.titulo{
+	color: #d70000;
+}
+
+.actor{
+	text-decoration: underline;
+	color: #fa8072;
+	font-weight: bold;
+}
+
+p#anillos, p#monster, p#mountain, p#mystic, p#master, p#nemo, p#lost{
+	background: url("img/bg-sinop.gif") no-repeat;
+	background-position: top left;	
+}
+
+p#monster,p#mystic,p#lost{
+	background-position: top right;
+}
