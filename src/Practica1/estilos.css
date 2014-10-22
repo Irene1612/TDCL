@@ -3,35 +3,33 @@
 	   src: url(FabricsLight.ttf)
 }
 
-body{	
-	
+html,body{
+	margin:0px;
+	height:100%;
+}
+
+body{		
+	background-color: rgba(255,205,85,0.5);
 }
 
 h1{
 	font-family: titlefont;
-	color: blue;
-}
-
-h2{
-}
-
-h3{
-	
-}
-
-a{
-	
-}
-
-p{
-	
+	color: #FA6A31;	
 }
 
 .centrado{
-	text-align: center;
+	margin: 0 auto;
 }
 
 #titulo{
-	
+	background-color: rgba(16,74,87,0.8);
+	width: 100%;
+	padding: 1px;
+}
+
+#menu{
+	background-color: #91beae;
+	width: 20%;
+	height: inherit;
 }
 
