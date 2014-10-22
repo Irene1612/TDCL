@@ -1,0 +1,37 @@
+@font-face {
+	   font-family: titlefont;
+	   src: url(FabricsLight.ttf)
+}
+
+body{	
+	
+}
+
+h1{
+	font-family: titlefont;
+	color: blue;
+}
+
+h2{
+}
+
+h3{
+	
+}
+
+a{
+	
+}
+
+p{
+	
+}
+
+.centrado{
+	text-align: center;
+}
+
+#titulo{
+	
+}
+
