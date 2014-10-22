@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <title>EJERCICIO 1 JAVASCRIPT</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+	       text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+        <br /> Cálculo de N.I.F. <hr /><br /><br />
+        <script>
+            var Letras = new Array('T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E','T');
+            function letraDni() {
+				var dni = document.getElementById("dni").value;
+				alert("La letra del DNI con número " + dni + " es: " + Letras[dni%23] + ".");
+			}
+        </script>
+        Introduzca su número de DNI:
+        <input type="number" name="dni" id="dni"/>
+        <input type="button" value="Enviar" onclick="letraDni();"/>
+    </body>
+</html>
+ 

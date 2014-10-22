@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Probando javascript</title>
+<script type="text/javascript">
+    function calcularFecha() {
+		var milisegs = (document.getElementById("dias").value)*24*60*60*1000;
+		var fechaHoy = new Date();	
+		document.getElementById("fecha").value = (new Date(fechaHoy.getTime() + milisegs)).toLocaleString();
+	};
+</script>
+</head>
+<body>
+<form>
+    <input type="number" id="dias">
+    <input type="text" id="fecha">
+    <input type="button" value="Calcular" onclick="calcularFecha();">
+</form> 
+</body>
+</html>
