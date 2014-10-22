@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="iso-8859-1">
+<title>Animación</title>
+<style>
+
+@-webkit-keyframes amoverse {
+	0% {
+		left: 20px;
+		top: 100px;
+	}
+	25% {
+        left: 1520px;
+        top: 100px;
+        background-color:rgba(255,0,0,0.9);
+    }
+	50% {
+	    left: 1520px;
+		top: 600px;
+		background-color:rgba(255,0,0,0.2);		
+	}
+	75% {
+	    top: 600px;
+        left: 20px;
+        background-color:rgba(255,0,0,0.9);
+    }
+	100% {
+	    left: 20px
+		top: 100px;
+		background-color:rgba(255,0,0,0.2);
+	}
+}
+@-moz-keyframes amoverse {
+	0% {
+        left: 20px;
+        top: 100px;
+    }
+    25% {
+        left: 1520px;
+        top: 100px;
+        background-color:rgba(255,0,0,0.9);
+    }
+    50% {
+        left: 1520px;
+        top: 600px;
+        background-color:rgba(255,0,0,0.2);     
+    }
+    75% {
+        top: 600px;
+        left: 20px;
+        background-color:rgba(255,0,0,0.9);
+    }
+    100% {
+        left: 20px
+        top: 100px;
+        background-color:rgba(255,0,0,0.2);
+    }
+}
+@-ms-keyframes amoverse {
+	0% {
+        left: 20px;
+        top: 100px;
+    }
+    25% {
+        left: 1520px;
+        top: 100px;
+        background-color:rgba(255,0,0,0.9);
+    }
+    50% {
+        left: 1520px;
+        top: 600px;
+        background-color:rgba(255,0,0,0.2);     
+    }
+    75% {
+        top: 600px;
+        left: 20px;
+        background-color:rgba(255,0,0,0.9);
+    }
+    100% {
+        left: 20px
+        top: 100px;
+        background-color:rgba(255,0,0,0.2);
+    }
+}
+
+@-o-keyframes amoverse {
+	0% {
+        left: 20px;
+        top: 100px;
+    }
+    25% {
+        left: 1520px;
+        top: 100px;
+        background-color:rgba(255,0,0,0.9);
+    }
+    50% {
+        left: 1520px;
+        top: 600px;
+        background-color:rgba(255,0,0,0.2);     
+    }
+    75% {
+        top: 600px;
+        left: 20px;
+        background-color:rgba(255,0,0,0.9);
+    }
+    100% {
+        left: 20px
+        top: 100px;
+        background-color:rgba(255,0,0,0.2);
+    }
+}
+
+
+ #div1 {
+    position:absolute;
+	height:50px;
+	width:50px;
+	left:20px;
+	top:100px;
+	border:1px red solid;
+	background-color:rgba(255,0,0,0.7);
+}
+
+#div1:hover{
+	-webkit-animation-name: amoverse;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+		
+	-moz-animation-name: amoverse;
+	-moz-animation-duration: 4s;
+	-moz-animation-iteration-count: infinite;	
+	-moz-animation-direction: alternate;
+	
+	-ms-animation-name: amoverse;
+	-ms-animation-duration: 4s;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-direction: alternate;
+  
+    -o-animation-name: amoverse;
+	-o-animation-duration: 4s;
+	-o-animation-iteration-count: infinite;
+	-o-animation-direction: alternate;
+	
+}
+</style>
+</head>
+<body>
+<h1>Animaciones CSS3</h1>
+<div id="div1">
+</div>
+</body>
+</html>
