@@ -30,6 +30,15 @@ body {
 h1 {
 	font-family: titlefont, serif;
 	color: #FA6A31;
+	text-align: center;
+}
+
+li{
+	list-style-type: none;
+}
+
+ul{
+	padding-left: 0;
 }
 
 h3 {
@@ -52,16 +61,20 @@ a{
 #titulo {
 	background-color: rgba(16, 74, 87, 0.9);
 	width: 100%;
-	padding: 1px;
+	padding: 8px 1px 1px 1px;
 	border-bottom: dashed #91beae;
+	float: left;
+	clear: left;
 }
 
 #celdatitulo {
-	width: 64%;
+	float: left;
+	width: 83%;
 }
 
 #celdalogo {
 	padding-left: 1%;
+	float: left;
 }
 
 #logo {
@@ -76,6 +89,7 @@ a{
 	min-width: 200px;
 	height: inherit;
 	float: left;
+	clear: left;
 }
 
 .itemmenu {
@@ -99,4 +113,8 @@ a{
 	width: 100%;
 	height: inherit;
 	border: none;
+}
+
+#footer{
+	clear: left;
 }
