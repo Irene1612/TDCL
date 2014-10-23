@@ -1,21 +1,21 @@
 @font-face {
 	font-family: titlefont;
-	src: url(fuentes/FabricsLight.ttf); 
+	src: url(../fuentes/FabricsLight.ttf);
 }
 
 @font-face {
-    font-family: menuitem;
-    src: url(fuentes/TravelingTypewriter.ttf); 
+	font-family: menuitem;
+	src: url(../fuentes/TravelingTypewriter.ttf);
 }
 
-@-webkit-keyframes girar { 
+@-webkit-keyframes girar {
 	0% {
-		-webkit-transform: rotate(0deg);
-	}
-	
-	100% {
-		-webkit-transform: rotate(360deg);    
-	}
+	   -webkit-transform: rotate(0deg);
+    }
+
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 html, body {
@@ -28,16 +28,21 @@ body {
 }
 
 h1 {
-	font-family: titlefont;
+	font-family: titlefont, serif;
 	color: #FA6A31;
 }
 
-h3{
-	font-family: menuitem;
+h3 {
+	font-family: menuitem, sans-serif;
 }
 
-table{
+table {
 	width: 100%;
+}
+
+a{
+	color: #3c3c3c;
+    text-decoration: none;
 }
 
 .centrado {
@@ -70,8 +75,28 @@ table{
 	width: 20%;
 	min-width: 200px;
 	height: inherit;
+	float: left;
 }
 
 .itemmenu {
-	padding: 0% 10%;
+	padding-left: 8%;
+	background-color: #c8dfd7;
+	color: #3c3c3c;
+	cursor: pointer;
+}
+
+.itemmenu:hover {
+	background-color: #deebe7;
+}
+
+#contenedor {
+	float: left;
+	width: 80%;
+	height: inherit;
+}
+
+#marcocontenedor {
+	width: 100%;
+	height: inherit;
+	border: none;
 }

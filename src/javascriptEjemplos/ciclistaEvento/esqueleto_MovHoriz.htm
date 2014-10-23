@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+	<script>
+		function DaTeclaKeyPress(Evento) {
+			var evento = Evento || window.event;
+			var codigo = evento.keyCode || evento.keyCode;
+			var caracter = String.fromCharCode(codigo);
+
+			if (caracter.toLowerCase() == 'z') {
+				var posh = parseInt(document.getElementById('capa').style.left);
+				posh = posh - 10;
+				document.getElementById('capa').style.left = posh + 'px';
+				document.getElementById('imagen').src = 'ciclista2.gif';
+			}
+			if (caracter.toLowerCase() == 'x') {
+				var posh = parseInt(document.getElementById('capa').style.left);
+				posh = posh + 10;
+				document.getElementById('capa').style.left = posh + 'px';
+				document.getElementById('imagen').src = 'ciclista.gif';
+			}
+		}
+
+		document.onkeypress = DaTeclaKeyPress;
+	</script>
+
+	<font size=5><i> Pulsa encima de la imagen</i></font>
+	<div id="capa" style="position: absolute; left: 10px; top: 125px; visibility: visible">
+		<img id="imagen" src='ciclista.gif'>
+	</div>
+</body>
+</html>
