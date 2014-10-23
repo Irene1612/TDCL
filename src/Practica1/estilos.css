@@ -1,35 +1,77 @@
 @font-face {
-	   font-family: titlefont;
-	   src: url(FabricsLight.ttf)
-}
-
-html,body{
-	margin:0px;
-	height:100%;
-}
-
-body{		
-	background-color: rgba(255,205,85,0.5);
-}
-
-h1{
 	font-family: titlefont;
-	color: #FA6A31;	
+	src: url(fuentes/FabricsLight.ttf); 
 }
 
-.centrado{
+@font-face {
+    font-family: menuitem;
+    src: url(fuentes/TravelingTypewriter.ttf); 
+}
+
+@-webkit-keyframes girar { 
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	
+	100% {
+		-webkit-transform: rotate(360deg);    
+	}
+}
+
+html, body {
+	margin: 0px;
+	height: 100%;
+}
+
+body {
+	background-color: rgba(255, 205, 85, 0.5);
+}
+
+h1 {
+	font-family: titlefont;
+	color: #FA6A31;
+}
+
+h3{
+	font-family: menuitem;
+}
+
+table{
+	width: 100%;
+}
+
+.centrado {
 	margin: 0 auto;
 }
 
-#titulo{
-	background-color: rgba(16,74,87,0.8);
+#titulo {
+	background-color: rgba(16, 74, 87, 0.9);
 	width: 100%;
 	padding: 1px;
+	border-bottom: dashed #91beae;
 }
 
-#menu{
-	background-color: #91beae;
+#celdatitulo {
+	width: 64%;
+}
+
+#celdalogo {
+	padding-left: 1%;
+}
+
+#logo {
+	-webkit-animation-name: girar;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+#menu {
+	background-color: rgba(16, 74, 87, 0.6);
 	width: 20%;
+	min-width: 200px;
 	height: inherit;
 }
 
+.itemmenu {
+	padding: 0% 10%;
+}
