@@ -1,0 +1,28 @@
+@font-face {
+	font-family: bodyfont;
+	src: url(../fuentes/centabel.ttf);
+}
+
+html, body {
+}
+
+body {
+	color: #072025;
+	font-family: bodyfont;
+}
+
+h2 {
+	text-align: center;
+	color: #072025;
+	font-family: monospace;
+	font-weight: bolder;
+}
+
+h3{
+	
+}
+
+.centrado {
+	margin: 0 auto;
+}
+
