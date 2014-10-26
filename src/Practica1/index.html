@@ -4,25 +4,33 @@
 <meta charset="utf-8">
 <title>Máster en Ingeniría Web</title>
 <link rel=StyleSheet type="text/css" href="css/estilos.css">
+<link rel="shortcut icon" href="img/logoMiw.ico" />
 </head>
 <body>
-	<div id="titulo">
+	<header id="titulo">
 		<div id="celdalogo">
-			<img id="logo" alt="logo" src="img/logoMIW.png">
+			<a href="contenedorppal.html" target="contenedor"><img id="logo" alt="logo" src="img/logoMIW.png"></a>
 		</div>
 		<div id="celdatitulo">
 			<h1>MASTER EN INGENIERIA WEB</h1>
 		</div>
+	</header>
+	<div id="seccionMedio">
+		<div id="menu">
+			<ul>
+				<li><h3 class="itemmenu"><a href="presentacion.html" target="contenedor">Presentación</a></h3></li>
+				<li><h3 class="itemmenu"><a href="asignaturas.html" target="contenedor">Asignaturas</a></h3></li>
+				<li><h3 class="itemmenu"><a href="tecnometod.html" target="contenedor">Tecnologías y metodologías</a></h3></li>
+				<li><h3 class="itemmenu"><a href="calendarioClase.html" target="contenedor">Calendario de clase</a></h3></li>
+				<li><h3 class="itemmenu"><a href="calendarioExamenes.html" target="contenedor">Calendario de exámenes</a></h3></li>
+				<li><h3 class="itemmenu"><a href="admision.html" target="contenedor">Admisión</a></h3></li>
+			</ul>
+		</div>
+		<div id="contenedor">
+			<object id="marcocontenedor" name="contenedor"
+				data="contenedorppal.html"></object>
+		</div>
 	</div>
-	<div id="menu">
-		<ul>
-			<li><h3 class="itemmenu">Presentación</h3></li>
-			<li><h3 class="itemmenu"><a href="prueba.html" target="contenedor">Asignaturas</a></h3></li>
-			<li><h3 class="itemmenu">Tecnologías y metodologías</h3></li>
-			<li><h3 class="itemmenu">Admisión</h3></li>
-		</ul>
-	</div>
-	<div id="contenedor"><iframe id="marcocontenedor" name="contenedor" src="contenedorppal.html"></iframe></div>
-	<div id="footer"><footer>footer</footer></div>
+	<footer id="footer">footer</footer>
 </body>
 </html>

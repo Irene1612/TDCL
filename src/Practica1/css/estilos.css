@@ -18,9 +18,10 @@
     }
 }
 
-html, body {
+html, body, div, iframe {
 	margin: 0px;
 	height: 100%;
+	padding: 0px;
 }
 
 body {
@@ -83,13 +84,18 @@ a{
 	-webkit-animation-iteration-count: infinite;
 }
 
+#seccionMedio {
+	float: left;
+	clear: left;
+	width: 100%;
+	min-height: 80%;
+}
+
 #menu {
 	background-color: rgba(16, 74, 87, 0.6);
 	width: 20%;
 	min-width: 200px;
-	height: inherit;
 	float: left;
-	clear: left;
 }
 
 .itemmenu {
@@ -104,17 +110,22 @@ a{
 }
 
 #contenedor {
-	float: left;
-	width: 80%;
-	height: inherit;
+	float: right;
+	width: 80%;		
 }
 
 #marcocontenedor {
-	width: 100%;
-	height: inherit;
+	width: 80%;
 	border: none;
+	position: absolute;
+	min-height: 100%;
 }
 
-#footer{
+#footer {
 	clear: left;
+	background-color: rgba(16, 74, 87, 0.9);
+	border-top: dashed #91beae;
+	color: #ffcd55;
+	position: relative;	
+	height: 30px;
 }
