@@ -24,9 +24,23 @@ h2 {
 
 fieldset{
 	border-color: #91beae;
+	
 }
 
 .centrado {
 	margin: 0 auto;
 }
 
+.table{
+    display: table;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tr{
+    display: table-row;
+}
+
+.td{
+    display: table-cell;   
+}

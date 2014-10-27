@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Probando javascript</title>
+<style type="text/css">
+    #container {
+        background-color: blue;
+        color: white;
+    }
+    
+    form{
+        float: left;
+        margin-right: 10%;
+        width: 50%;        
+    }
+    
+    p{
+        margin: 0;        
+    }
+    
+    div{
+        float: left;
+        clear: right;
+        width: 40%;
+        min-height: 150px; 
+    }
+</style>
+
+<script type="text/javascript">
+    var trabajadores = new Array(new Trabajador('Pepe', 1000));
+    
+    function Trabajador(nombre, ahorro){
+    	this.nombre = nombre;
+    	this.ahorro = ahorro;
+    	this.setAhorro = setAhorro;
+    	this.getAhorro = getAhorro;
+    	this.getName = getName;
+    }
+    
+    function setAhorro(cantidad){
+    	this.ahorro = cantidad;
+    } 
+    
+    function getAhorro(){
+        return this.ahorro;
+    }
+    
+    function getName(){
+        return this.nombre;
+    }
+
+    function registrar() {
+    	var nombre = document.getElementById('nombre').value;
+    	var ahorro = document.getElementById('cantidadTrabajador').value;
+    	trabajadores[trabajadores.length] = new Trabajador(nombre, ahorro);
+    	actualizarDiv();
+	}
+    
+    function ahorrar() {
+    	var posicion = document.getElementById('numero').value;
+    	var cantidad = document.getElementById('cantidadAhorro').value;
+    	trabajadores[posicion].setAhorro(trabajadores[posicion].getAhorro() + parseInt(cantidad));
+    	actualizarDiv();
+    }
+    
+    function gastar() {
+    	var posicion = document.getElementById('numero').value;
+        var cantidad = document.getElementById('cantidadAhorro').value;
+        if(trabajadores[posicion].getAhorro()<cantidad){
+        	alert(trabajadores[posicion].getName() + " no puede gastar tanto dinero.");
+        }else{
+        	trabajadores[posicion].setAhorro(trabajadores[posicion].getAhorro() - parseInt(cantidad));
+        }        
+    	actualizarDiv();
+    }
+    
+    function actualizarDiv() {    	
+    	var contenedor = document.getElementById('container');
+    	limpiar(contenedor);
+    	for (var i = 0; i < trabajadores.length; i++) {
+    		var p = document.createElement('p');
+    		var texto = document.createTextNode(i+ ".- " + trabajadores[i].getName() + " : " + trabajadores[i].getAhorro() + " €.");
+    		p.appendChild(texto);
+    	    contenedor.appendChild(p);
+		}
+	}
+    
+    function limpiar(capa) {
+    	if (capa.hasChildNodes() ){
+	    	while (capa.childNodes.length >= 1 ){
+	    		  capa.removeChild(capa.firstChild);
+	    	}
+    	}
+	}
+</script>
+
+</head>
+<body onload="actualizarDiv();">
+	<form>
+	    <fieldset>
+	        <legend>Datos del Trabajador</legend>
+	        Nombre: <input type="text" id="nombre"/>
+	        Cantidad: <input type="number" id="cantidadTrabajador"/>
+	        <input type="button" value="Registrar" onclick="registrar();">
+	    </fieldset>
+	    <fieldset>
+	        <legend>Datos del Ahorro</legend>
+	        Número: <input type="number" id="numero"/>
+	        Cantidad: <input type="number" id="cantidadAhorro"/>
+	        <input type="button" value="Ahorrar" onclick="ahorrar();">
+	        <input type="button" value="Gastar" onclick="gastar();">
+	    </fieldset>
+	</form>
+	<div id="container">
+	</div>
+</body>
+</html>
