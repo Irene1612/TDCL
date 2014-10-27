@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Probando javascript</title>
+<style type="text/css">
+    p {
+        border: solid 2px blue;
+        text-align: center;     
+        width: 100px;
+    }
+</style>
+
+<script type="text/javascript">
+    var numParrafosFijos =  3;
+    function aniadirParrafo() {
+    	var contenedor = document.getElementById('container');
+    	var p = document.createElement('p');     
+    	var texto = document.createTextNode("Parrafo " + (contenedor.getElementsByTagName('p').length+1));
+    	p.appendChild(texto);
+		contenedor.appendChild(p);
+	}
+    
+    function quitarParrafo() {
+        var contenedor = document.getElementById('container');
+        if(contenedor.getElementsByTagName('p').length>3){
+	        document.getElementById('container').removeChild(contenedor.lastChild);
+        }else{
+        	alert('No se pueden eliminar los parrafos iniciales!');
+        }
+    }
+</script>
+
+</head>
+<body>
+<div id="container">
+    <p>Parrafo 1</p>
+    <p>Parrafo 2</p>
+    <p>Parrafo 3</p>
+</div>
+<form>
+    <input type="button" value="Añadir parrafo" onclick="aniadirParrafo();">
+    <input type="button" value="Quitar parrafo" onclick="quitarParrafo();">
+</form> 
+</body>
+</html>

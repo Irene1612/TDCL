@@ -50,9 +50,9 @@ table {
 	width: 100%;
 }
 
-a{
-	color: #3c3c3c;
-    text-decoration: none;
+h3 a{
+	color: #3c3c3c;  
+	text-decoration: none;  
 }
 
 .centrado {
@@ -125,7 +125,12 @@ a{
 	clear: left;
 	background-color: rgba(16, 74, 87, 0.9);
 	border-top: dashed #91beae;
-	color: #ffcd55;
 	position: relative;	
 	height: 30px;
+	text-align: center;
+}
+
+#footer a{
+	color: #fa6a31; 
+	font-weight: bolder;
 }
