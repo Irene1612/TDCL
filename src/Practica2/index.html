@@ -6,55 +6,90 @@
 	<script type="text/javascript" src="javascript.js"></script>
 	<link rel=StyleSheet type="text/css" href="estilos.css">
 	</head>
-	<body onload="fechaHoyToString();">
+	<body onload="onload();">
 	    <h1>Herramienta de Generación de Facturas</h1>
 	    
 		<form id="miform">
 		  <div class="table">
 		      <div class="tr">
-			      <div class="td"> 
+			      <div class="td aLaDcha"> 
 	                   <label id="fecha"></label>       
 	              </div>
 		          <div class="td">
-		              <div> <!-- table -->
+		              <div class="table">
                            <div class="tr">
-	                           <div class="td"> 
+	                           <div class="td aLaDcha"> 
 		                          <label>Fecha límite de abono (días): </label>
 		                       </div>
 		                       <div class="td"> 
-			                       <input type="radio" name="fechaLimite" value="90" onchange="calcularFechaAbono();"/>90 <br>
-			                       <input type="radio" name="fechaLimite" value="120" onchange="calcularFechaAbono();"/>120 <br> 
-			                       <input type="radio" name="fechaLimite" value="180" onchange="calcularFechaAbono();"/>180 <br>
+			                       <input type="radio" name="fechaLimite" value="90" onchange="calcularFechaAbono(); ocultarCalendario();"/>90 <br>
+			                       <input type="radio" name="fechaLimite" value="120" onchange="calcularFechaAbono(); ocultarCalendario();"/>120 <br> 
+			                       <input type="radio" name="fechaLimite" value="180" onchange="calcularFechaAbono(); ocultarCalendario();"/>180 <br>
+			                       <input type="radio" name="fechaLimite" value="diaConcreto" onchange="mostrarCalendario();"/>Día Concreto<br>
 		                       </div>
 		                    </div> 
 		              </div>
+                  </div>
+                  <div id="calendarioNo"> 
+                      <input type="date" id="calendarioFechaLimite" name="calendarioFechaLimite" onchange="calcularFechaAbono(); ocultarCalendario();"/>          		
                   </div>
                   <div class="td"> 
                        <label id="fechaAbono">Fecha límite de abono: -</label>       
                   </div>
 		      </div>
-		  </div>
-		  
-           
-	<!-- 		Nombre: -->
-	<!-- 		<input type="text" name="nombre" id="nombre" size=10 maxlength=15/><br> -->
-	<!-- 		Clave: -->
-	<!-- 		<input type="password" name="clave" id="clave"/><br>	 -->
-	<!-- 		Sexo: -->
-	<!-- 		<input type="radio" name="sexo" value="H"/>H -->
-	<!-- 		<input type="radio" name="sexo" value="M"/>M <br> -->
-	<!-- 		Fichero: -->
-	<!-- 		<input type="file" name="fichero"/><br> -->
-	<!-- 		<textarea rows=5 cols=15></textarea><br> -->
-	<!-- 		<select name="ciudad"> -->
-	<!-- 		      <option value="Madrid" selected="selected">Madrid</option> -->
-	<!-- 		      <option value="Bilbao">Bilbao</option> -->
-	<!-- 		      <option value="Barcelona">Barcelona</option> -->
-	<!-- 		</select><br> -->
-	<!-- 		<input type="submit" value="Enviar"/> -->
-	<!-- 		<input type="reset" value="Limpiar"/> -->
-	<!-- 		<input type="button" value="Saludar" onclick='alert("Holaaaa")'/> -->
-	<!-- 		<button type="submit"><i>Enviar también</i></button> -->
+		  </div>		      	      	 
+   		  <table>
+    		<thead><tr>
+    			<th>Concepto</th>
+    			<th>Precio</th>
+    			<th>Unidades</th>
+    			<th>Importe</th>
+    		</tr></thead>			      		
+    		<tfoot>
+	     		<tr>
+	     			<td class="celdaNoBorde"></td>
+	      			<td class="celdaNoBorde"></td>
+	      			<td>Subtotal</td>
+	      			<td><input type="text" id="subtotal"/></td>
+	     		</tr>
+	     		<tr>
+	     			<td class="celdaNoBorde"></td>
+	      			<td class="celdaNoBorde"></td>
+	      			<td>IVA</td>
+	      			<td><input type="text" id="iva"/></td>
+	     		</tr>
+	     		<tr>
+	     			<td class="celdaNoBorde"></td>
+	      			<td class="celdaNoBorde"></td>
+	      			<td>Total</td>
+	      			<td><input type="text" id="total"/></td>
+	     		</tr>
+    		</tfoot>
+    		<tbody id="lineasDetalle">
+    			<tr>
+	    			<td><input type="text" id="concepto0"/></td>
+	    			<td><input type="text" id="precio0"/></td>
+	    			<td><input type="text" id="unidades0"/></td>
+	    			<td><input type="text" id="importe0"/></td>
+    			</tr>
+    		</tbody>		      		
+   		</table>
+   		<div class="table centrado">
+   			<div class="tr">
+   				<div class="td">
+   					<button type="button" onclick="aniadirLinea();">Añadir línea de detalle</button>
+   				</div>
+   				<div class="td">
+   					<button type="button" id="botonEliminar" onclick="eliminarLinea();" disabled="disabled">Eliminar línea de detalle</button>
+   				</div>
+   				<div class="td">
+   					<button type="button" onclick="calcular();">Calcular</button>
+   				</div>
+   				<div class="td">
+   					<button type="submit">Enviar</button>
+   				</div>
+   			</div>   		
+   		</div>		      
 		</form>
 	</body>
 </html>
