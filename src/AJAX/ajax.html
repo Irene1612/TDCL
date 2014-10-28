@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head><title>Prueba AJAX con PHP y JSON</title>
+</head>
+<body>
+<script type='text/javascript'>
+
+	var peticion;
+	function SolicitaProvincia(){
+		if (window.XMLHttpRequest){// codigo para IE9+, Firefox, Chrome, Opera, Safari
+			peticion = new XMLHttpRequest();
+		}else{// codigo para IE6, IE5
+			peticion = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		
+		peticion.onreadystatechange = TrataRespuesta; 
+		var url = "provincia.php?CP="+document.getElementById("CP").value;
+		peticion.open("GET", url, true);
+		peticion.send(null);
+	}
+
+	function TrataRespuesta() {
+		if (peticion.readyState == 4) {
+			if (peticion.status == 200) {
+				var dato_cadena = peticion.responseText; 
+				document.getElementById("Provincia").value = dato_cadena;
+			}else{
+				alert("Ocurrio un problema con la URL.");
+			}
+		}
+	}
+	
+</script>
+<center>
+<h1><font color="blue">Inserci&oacute;n de datos</font></h1>
+<h3>Formulario de Entrada de Datos</h3>
+<br /><br /><br /><hr />
+<form name="miformulario" method='post' action="#" id="miformulario">
+  <table border="1">
+    <tr>
+      <td>C&oacute;digo Postal:</td>
+      <td><input type="Text" name="CP" id="CP" size="3" maxlength="3" onblur='SolicitaProvincia()'>
+      </td>
+      <td>Provincia:</td>
+      <td><input type="Text" name="Provincia" id='Provincia' size="10" maxlength="10"></td>
+    </tr>
+    <tr>
+      <td><input type="Submit" value="Enviar"></td>
+      <td><input type="Reset" value="Borrar"></td>
+    </tr>
+  </table>
+</form>
+</center><br /><hr />
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	<meta charset="utf-8">
+	<title>Ejemplo formulario</title>
+	<script type="text/javascript" src="javascript.js"></script>
+	<link rel=StyleSheet type="text/css" href="estilos.css">
+	</head>
+	<body onload="fechaHoyToString();">
+	    <h1>Herramienta de Generación de Facturas</h1>
+	    
+		<form id="miform">
+		  <div class="table">
+		      <div class="tr">
+			      <div class="td"> 
+	                   <label id="fecha"></label>       
+	              </div>
+		          <div class="td">
+		              <div> <!-- table -->
+                           <div class="tr">
+	                           <div class="td"> 
+		                          <label>Fecha límite de abono (días): </label>
+		                       </div>
+		                       <div class="td"> 
+			                       <input type="radio" name="fechaLimite" value="90" onchange="calcularFechaAbono();"/>90 <br>
+			                       <input type="radio" name="fechaLimite" value="120" onchange="calcularFechaAbono();"/>120 <br> 
+			                       <input type="radio" name="fechaLimite" value="180" onchange="calcularFechaAbono();"/>180 <br>
+		                       </div>
+		                    </div> 
+		              </div>
+                  </div>
+                  <div class="td"> 
+                       <label id="fechaAbono">Fecha límite de abono: -</label>       
+                  </div>
+		      </div>
+		  </div>
+		  
+           
+	<!-- 		Nombre: -->
+	<!-- 		<input type="text" name="nombre" id="nombre" size=10 maxlength=15/><br> -->
+	<!-- 		Clave: -->
+	<!-- 		<input type="password" name="clave" id="clave"/><br>	 -->
+	<!-- 		Sexo: -->
+	<!-- 		<input type="radio" name="sexo" value="H"/>H -->
+	<!-- 		<input type="radio" name="sexo" value="M"/>M <br> -->
+	<!-- 		Fichero: -->
+	<!-- 		<input type="file" name="fichero"/><br> -->
+	<!-- 		<textarea rows=5 cols=15></textarea><br> -->
+	<!-- 		<select name="ciudad"> -->
+	<!-- 		      <option value="Madrid" selected="selected">Madrid</option> -->
+	<!-- 		      <option value="Bilbao">Bilbao</option> -->
+	<!-- 		      <option value="Barcelona">Barcelona</option> -->
+	<!-- 		</select><br> -->
+	<!-- 		<input type="submit" value="Enviar"/> -->
+	<!-- 		<input type="reset" value="Limpiar"/> -->
+	<!-- 		<input type="button" value="Saludar" onclick='alert("Holaaaa")'/> -->
+	<!-- 		<button type="submit"><i>Enviar también</i></button> -->
+		</form>
+	</body>
+</html>
