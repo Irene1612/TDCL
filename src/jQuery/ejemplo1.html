@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Probando jQuery</title>
+<style type="text/css">
+    p {
+        border: solid 2px blue;
+        text-align: center;     
+        width: 100px;
+    }
+</style>
+<script src="jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+   <!-- aqui va el jQuery-->
+   numParrafos = 3;
+   $().ready(function() {
+	   $('#Aniade').click(function() {
+		   $('#container').append('<p class="parrafo"> Parrafo ' + (numParrafos+1) + '</p>');
+		   numParrafos++;
+		 });	   
+	   $('#Vacia').click(function() {
+	       $('#container').empty();
+	       numParrafos = 0;
+	     });	   
+	});   
+</script>
+
+</head>
+<body>
+<div id="container">
+    <p>Parrafo 1</p>
+    <p>Parrafo 2</p>
+    <p>Parrafo 3</p>
+</div>
+<form>
+    <input id="Aniade" type="button" value="Añadir parrafo">
+    <input id="Vacia" type="button" value="Quitar parrafo">
+</form> 
+</body>
+</html>
