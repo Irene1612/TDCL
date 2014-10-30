@@ -1,7 +1,15 @@
+@font-face {
+    font-family: handwriting;
+    src: url(fuentes/Alittlesunshine.ttf);
+}
+
 html, body {
 }
 
 body {
+	background-image:  url("images/fondo.jpg");
+	font-family: handwriting;
+	font-size: 17pt;
 }
 
 h1{
@@ -14,7 +22,22 @@ table {
 }
 
 th, td{
-	border: solid 1px;
+/* 	border: solid 1px; */
+}
+
+input{
+/* 	background-color: #FFF8DC; */
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px dotted;
+	font: inherit;
+}
+
+button{
+	border-radius: 25px;
+	max-height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 canvas{
@@ -57,4 +80,31 @@ canvas{
 
 #calendarioSi{
 	display: table-cell;
+}
+
+#btnAniadir{
+	background-color: #20B2AA;
+}
+
+#btnCalcular{
+	
+}
+
+#btnEnviar{
+	
+}
+
+#graficoContainer{
+	float: left;
+	width: 49%;
+}
+
+#factura{
+	float: left;
+	width: 49%;
+}
+
+
+#contenido{
+    margin-top: 3%;
 }

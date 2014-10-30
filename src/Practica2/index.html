@@ -37,62 +37,66 @@
                        <label id="fechaAbono">Fecha límite de abono: -</label>       
                   </div>
 		      </div>
-		  </div>		      	      	 
-   		  <table>
-    		<thead><tr>
-    			<th>Concepto</th>
-    			<th>Precio (€)</th>
-    			<th>Unidades</th>
-    			<th>Importe (€)</th>
-    		</tr></thead>			      		
-    		<tfoot>
-	     		<tr>
-	     			<td class="celdaNoBorde"></td>
-	      			<td class="celdaNoBorde"></td>
-	      			<td>Subtotal</td>
-	      			<td><input type="text" id="subtotal"/></td>
-	     		</tr>
-	     		<tr>
-	     			<td class="celdaNoBorde"></td>
-	      			<td class="celdaNoBorde"></td>
-	      			<td>IVA</td>
-	      			<td><input type="text" id="iva"/></td>
-	     		</tr>
-	     		<tr>
-	     			<td class="celdaNoBorde"></td>
-	      			<td class="celdaNoBorde"></td>
-	      			<td>Total</td>
-	      			<td><input type="text" id="total"/></td>
-	     		</tr>
-    		</tfoot>
-    		<tbody id="lineasDetalle">
-    			<tr>
-	    			<td><input type="text" id="concepto0"/></td>
-	    			<td><input type="text" id="precio0"/></td>
-	    			<td><input type="text" id="unidades0"/></td>
-	    			<td><input type="text" id="importe0"/></td>
-    			</tr>
-    		</tbody>		      		
-   		</table>
-   		<div class="table centrado">
-   			<div class="tr">
-   				<div class="td">
-   					<button type="button" onclick="aniadirLinea();">Añadir línea de detalle</button>
-   				</div>
-   				<div class="td">
-   					<button type="button" id="botonEliminar" onclick="eliminarLinea();" disabled="disabled">Eliminar línea de detalle</button>
-   				</div>
-   				<div class="td">
-   					<button type="button" onclick="calcular();">Calcular</button>
-   				</div>
-   				<div class="td">
-   					<button type="button" onclick="enviar();">Enviar</button>
-   				</div>
-   			</div>   		
-   		</div>   				      
-		</form>
-		<div id="graficoContainer">
-		      <canvas id="myChart" width="400" height="400"></canvas>
-		</div>		
+		  </div>
+		  <div id="contenido">
+			  <div id="factura">		      	      	 
+		   		  <table>
+		    		<thead><tr>
+		    			<th>Concepto</th>
+		    			<th>Precio (€)</th>
+		    			<th>Unidades</th>
+		    			<th>Importe (€)</th>
+		    		</tr></thead>			      		
+		    		<tfoot>
+			     		<tr>
+			     			<td class="celdaNoBorde"></td>
+			      			<td class="celdaNoBorde"></td>
+			      			<td>Subtotal</td>
+			      			<td><input type="text" id="subtotal"/></td>
+			     		</tr>
+			     		<tr>
+			     			<td class="celdaNoBorde"></td>
+			      			<td class="celdaNoBorde"></td>
+			      			<td>IVA</td>
+			      			<td><input type="text" id="iva"/></td>
+			     		</tr>
+			     		<tr>
+			     			<td class="celdaNoBorde"></td>
+			      			<td class="celdaNoBorde"></td>
+			      			<td>Total</td>
+			      			<td><input type="text" id="total"/></td>
+			     		</tr>
+		    		</tfoot>
+		    		<tbody id="lineasDetalle">
+		    			<tr>
+			    			<td><input type="text" id="concepto0"/></td>
+			    			<td><input type="text" id="precio0"/></td>
+			    			<td><input type="text" id="unidades0"/></td>
+			    			<td><input type="text" id="importe0"/></td>
+		    			</tr>
+		    		</tbody>		      		
+		   		</table>
+		   		<div class="table centrado">
+		   			<div class="tr">
+		   				<div class="td">
+		   					<button id="btnAniadir" type="button" onclick="aniadirLinea();">Añadir línea de detalle</button>
+		   				</div>
+		   				<div class="td">
+		   					<button id="botonEliminar" type="button" onclick="eliminarLinea();" disabled="disabled">Eliminar línea de detalle</button>
+		   				</div>
+		   				<div class="td">
+		   					<button id="btnCalcular" type="button" onclick="calcular();">Calcular</button>
+		   				</div>
+		   				<div class="td">
+		   					<button id="btnEnviar" type="button" onclick="enviar();">Enviar</button>
+		   				</div>
+		   			</div>   		
+		   		</div>
+	   		</div>
+	   		<div id="graficoContainer">
+	              <canvas id="myChart" width="400" height="400"></canvas>
+	        </div>  
+        </div> 				      
+		</form>				
 	</body>
 </html>
