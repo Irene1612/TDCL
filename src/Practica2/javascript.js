@@ -2,6 +2,8 @@ var numLineasDetalle = 1;
 var numDatos = 4;
 var fechaHoy = new Date();
 
+
+
 function onload() {
 	document.getElementById("fecha").innerHTML = "Fecha: " + fechaHoy.toLocaleDateString();
 	document.getElementById('calendarioFechaLimite').setAttribute("value", fechaHoy.getFullYear() + "-" + ("0" + (fechaHoy.getMonth() + 1)).slice(-2) + "-" +  ("0" + fechaHoy.getDate()).slice(-2));
@@ -104,12 +106,16 @@ function calcular() {
 			calcularImporte(i);
 			actualizarSubtotal(i);
 			actualizarIVA(i);
-			calcularTotal();
 		}else{
 			vacio =  true;			
 		}	
 	}	
-	if(vacio) alert("No están rellenos todos los campos de la factura.");
+	if(vacio){
+		alert("No están rellenos todos los campos de la factura.");
+	}else{
+		var total = calcularTotal();
+		mostrarGrafico(total);
+	}
 }
 
 function calcularImporte(i) {
@@ -127,6 +133,37 @@ function actualizarIVA(i) {
 
 function calcularTotal(i) {	
 	document.getElementById("total").value = (parseFloat(document.getElementById("subtotal").value) + parseFloat(document.getElementById("iva").value)).toFixed(2);
+	return document.getElementById("total").value;
+}
+
+function mostrarGrafico(total) {
+	crearNuevoCanvas();
+	pintarGrafico(total);	
+}
+
+function crearNuevoCanvas() {
+	if(document.getElementById("graficoContainer").hasChildNodes()){
+		document.getElementById("graficoContainer").removeChild(document.getElementById("myChart"));
+	}
+	var canvas = document.createElement("canvas");
+	canvas.setAttribute("id", "myChart");
+	canvas.setAttribute("height", 400);
+	canvas.setAttribute("width", 400);
+	document.getElementById("graficoContainer").appendChild(canvas);
+}
+
+function pintarGrafico(total) {
+	Chart.defaults.global.tooltipTemplate = "<%if (label){%><%=label%>: <%}%><%= (value*" + total +")/100  %> €";
+	var grafico = new Chart(document.getElementById("myChart").getContext("2d")).Pie();
+	for (var i = 0; i < numLineasDetalle; i++) {
+		var color = new Array(Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256));
+		grafico.addData({
+		    value: (document.getElementById("importe" + i).value *  100) / total,
+		    color: "rgb(" + color[0] +"," + color[1] +"," + color[2] + ")",
+		    highlight: "rgba(" + color[0] +"," + color[1] +"," + color[2] + ",0.8)",
+		    label: document.getElementById("concepto" + i).value
+		});
+	}
 }
 
 function enviar() {

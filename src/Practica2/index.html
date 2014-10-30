@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	<title>Ejemplo formulario</title>
 	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript" src="Chart.js"></script>
 	<link rel=StyleSheet type="text/css" href="estilos.css">
 	</head>
 	<body onload="onload();">
-	    <h1>Herramienta de Generación de Facturas</h1>
-	    
+	    <h1>Herramienta de Generación de Facturas</h1>	    
 		<form id="miform">
 		  <div class="table anchoTotal">
 		      <div class="tr">
@@ -89,7 +89,10 @@
    					<button type="button" onclick="enviar();">Enviar</button>
    				</div>
    			</div>   		
-   		</div>		      
+   		</div>   				      
 		</form>
+		<div id="graficoContainer">
+		      <canvas id="myChart" width="400" height="400"></canvas>
+		</div>		
 	</body>
 </html>

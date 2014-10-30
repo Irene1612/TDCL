@@ -17,6 +17,11 @@ th, td{
 	border: solid 1px;
 }
 
+canvas{
+    display: block;
+    margin: 2% auto;	
+}	
+
 .table{
 	display: table;	
 }
