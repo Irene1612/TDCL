@@ -1,12 +1,19 @@
-var dniValido = true;
-var emailValido = true;
+var dniValido = false;
+var emailValido = false;
 
 $(document).ready(function (){
 	$("#fecha").datepicker();
 	$("#radio").buttonset();
 	$("#sortable").sortable();
 	$("#sortable").disableSelection();
-	$("#enviar").button();
+	$("#enviar").button().click(function( event ) {	
+		if(dniValido && emailValido){
+			$("#miform").submit();
+		}else{
+			$("#miform").preventDefault();
+		}
+	
+	});
 	$("input[name=medio]:radio").change(function () {
 		if(this.value=='ordinario'){
 			mostrarCorreo();
@@ -48,6 +55,9 @@ $(document).ready(function (){
 		if(Letras[this.value.slice(0, this.value.length - 1)%23] != this.value.slice(this.value.length - 1, this.value.length)){
 			$("#dni").css('border-color','#ff0000');
 			dniValido = false;
+		}else{
+			dniValido = true;
+			$("#dni").css('border-color','#24ed09');
 		}
 	});
 	$("#email").blur(function(){
@@ -55,16 +65,23 @@ $(document).ready(function (){
 		if(!this.value.match(pattern)){
 			$("#email").css('border-color','#ff0000');
 			emailValido = false;
+		}else{
+			emailValido = true;
+			$("#email").css('border-color','#24ed09');
 		}
 	});
 });
 
+
 function mostrarCorreo() {
 		$('#correoContainer').removeClass("no-display");
+		$('#email').val("");
 		$('#correoElectronicoContainer').addClass("no-display");
 }
 
 function mostrarCorreoElectronico() {
 		$('#correoElectronicoContainer').removeClass("no-display");
+		$('#localidad').val("");
+		$('#correo').val("");
 		$('#correoContainer').addClass("no-display");	
 }

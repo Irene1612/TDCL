@@ -12,27 +12,27 @@
 </head>
 <body>
     <h1>Formulario de Alta</h1>
-	<form action="http://www.eui.upm.es/~salonso/master/procesa.php">		
+	<form id="miform" action="http://www.eui.upm.es/~salonso/master/procesa.php">		
 		<div class="table centrado" id="formContainer">
 			<div class="tr">
 				<div class="td">Nombre de usuario:</div>
-				<div class="td"><input type="text" name="nombre" id="nombre"/></div>
+				<div class="td"><input type="text" name="nombre" id="nombre" required/></div>
 			</div>
 			<div class="tr">
 				<div class="td">DNI:</div>
-				<div class="td"><input type="text" name="dni" id="dni"/></div>
+				<div class="td"><input type="text" name="dni" id="dni" required/></div>
 			</div>
 			<div class="tr">
 				<div class="td">C.P.:</div>
-				<div class="td"><input type="number" name="cp" id="cp"/></div>
+				<div class="td"><input type="number" name="cp" id="cp" required/></div>
 			</div>
 			<div class="tr">
 				<div class="td">Provincia:</div>
-				<div class="td"><input type="text" name="provincia" id="provincia"/></div>
+				<div class="td"><input type="text" name="provincia" id="provincia" required/></div>
 			</div>
 			<div class="tr">
 				<div class="td">Fecha de alta:</div>
-				<div class="td"><input type="text" name="fecha" id="fecha"/></div>
+				<div class="td"><input type="text" name="fecha" id="fecha" required/></div>
 			</div>
 			<div class="tr">
 				<div class="td">¿Por qué medio desea que se le envíe el carnet del club?</div>
@@ -45,7 +45,7 @@
 			</div>	
 			<div id="correoElectronicoContainer" class="tr no-display">
 				<div class="td">Correo electrónico:</div>
-				<div class="td"><input type="email" name="email" id="email"/></div>
+				<div class="td"><input type="text" name="email" id="email"/></div>
 			</div>
 			<div id="correoContainer" class="tr no-display">
 				<div class="td">Dirección de correo:</div>
@@ -74,8 +74,8 @@
 		</div>
 		
 		<div id="contenedorBotones">
-			<button id="enviar" type="submit">Enviar</button>
-		</div>	
+			<input type="submit"  id="enviar" value="Enviar">
+		</div>
 	</form>
 </body>
 </html>
