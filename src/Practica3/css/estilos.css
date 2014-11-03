@@ -1,9 +1,7 @@
-html, body {
-}
-
 body {
 	color: #1c94c4;
 	background-image: url("images/fondo.jpg");
+	font-size: 16px;
 }
 
 h1{
@@ -13,10 +11,6 @@ h1{
 table {	
     border-collapse: collapse;
     margin: 3% auto;
-}
-
-th, td{
-/* 	border: solid 1px; */
 }
 
 input{
@@ -31,6 +25,9 @@ button{
     cursor: pointer;
 }
 
+p{
+	text-align: center;
+}
 #sortable {
 	list-style-type: none;
 	padding: 0;
@@ -86,5 +83,25 @@ button{
 
 #contenedorBotones{
 	text-align: center;
+	clear: both;
 }
 
+#amount{
+	background: transparent;
+	
+}
+
+#sliderContainer{
+	float: left;
+	width: 20%;
+}
+
+#slider-vertical{
+	height:300px;
+	margin: 0 21%;
+}
+
+#formContainer{
+	float: left;
+	width: 80%;	
+}

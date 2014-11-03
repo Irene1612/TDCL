@@ -8,19 +8,19 @@
 <link href="css/estilos.css" rel="stylesheet">
 <script src="js/jquery.js"></script>
 <script src="js/jquery-ui.js"></script>
-<script src="js/javascript.js"></script>
+<script src="js/script.js"></script>
 </head>
 <body>
     <h1>Formulario de Alta</h1>
-	<form action="http://www.eui.upm.es/~salonso/master/procesa.php">
-		<div class="table centrado">
+	<form action="http://www.eui.upm.es/~salonso/master/procesa.php">		
+		<div class="table centrado" id="formContainer">
 			<div class="tr">
 				<div class="td">Nombre de usuario:</div>
 				<div class="td"><input type="text" name="nombre" id="nombre"/></div>
 			</div>
 			<div class="tr">
 				<div class="td">DNI:</div>
-				<div class="td"><input type="number" name="dni" id="dni"/></div>
+				<div class="td"><input type="text" name="dni" id="dni"/></div>
 			</div>
 			<div class="tr">
 				<div class="td">C.P.:</div>
@@ -63,11 +63,17 @@
 						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Juegos</li>
 					</ul>
 				</div>
+			</div>	
 			</div>
-		</div>			
+		<div id="sliderContainer">
+			<p>
+	 			 <label for="amount">Tamaño letra:</label>
+	 			 <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+			</p>		
+			<div id="slider-vertical"></div>
+		</div>
+		
 		<div id="contenedorBotones">
-			<button id="aumentar">Aumentar letra</button>
-			<button id="disminuir">Disminuir letra</button>
 			<button id="enviar" type="submit">Enviar</button>
 		</div>	
 	</form>
