@@ -27,6 +27,14 @@ fieldset{
 	
 }
 
+h4{
+	margin-left: 3%;
+}
+
+button{
+	margin-left: 46%;
+}
+
 .centrado {
 	margin: 0 auto;
 }
@@ -43,4 +51,13 @@ fieldset{
 
 .td{
     display: table-cell;   
+}
+
+#imagen{	
+	content: url("../img/calendario.jpg");
+}
+
+#leyenda{
+	margin: 0 auto;
+	content: url("../img/leyenda.jpg");
 }
