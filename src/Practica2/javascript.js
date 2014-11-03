@@ -51,6 +51,7 @@ function aniadirLinea() {
 				break;
 			case 3:
 				nuevoInput.id = 'importe' + numLineasDetalle;
+				nuevoInput.disabled = 'disabled';
 				break;	
 			default:
 				break;
