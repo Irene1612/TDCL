@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Práctica 3 jQuery</title>
+<link href="css/jquery-ui.css" rel="stylesheet">
+<link href="css/jquery-ui.theme.css" rel="stylesheet">
+<link href="css/jquery-ui.structure.css" rel="stylesheet">
+<link href="css/estilos.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/javascript.js"></script>
+</head>
+<body>
+    <h1>Formulario de Alta</h1>
+	<form action="http://www.eui.upm.es/~salonso/master/procesa.php">
+		<div class="table centrado">
+			<div class="tr">
+				<div class="td">Nombre de usuario:</div>
+				<div class="td"><input type="text" name="nombre" id="nombre"/></div>
+			</div>
+			<div class="tr">
+				<div class="td">DNI:</div>
+				<div class="td"><input type="number" name="dni" id="dni"/></div>
+			</div>
+			<div class="tr">
+				<div class="td">C.P.:</div>
+				<div class="td"><input type="number" name="cp" id="cp"/></div>
+			</div>
+			<div class="tr">
+				<div class="td">Provincia:</div>
+				<div class="td"><input type="text" name="provincia" id="provincia"/></div>
+			</div>
+			<div class="tr">
+				<div class="td">Fecha de alta:</div>
+				<div class="td"><input type="text" name="fecha" id="fecha"/></div>
+			</div>
+			<div class="tr">
+				<div class="td">¿Por qué medio desea que se le envíe el carnet del club?</div>
+				<div class="td">
+					<div id="radio">
+						<input type="radio" id="radio1" name="medio" value="ordinario" onchange="mostrarCorreo();"><label for="radio1">Correo ordinario</label>
+						<input type="radio" id="radio2" name="medio" value="electronico" onchange="mostrarCorreoElectronico();"><label for="radio2">Correo electrónico</label>
+					</div>
+				</div>
+			</div>	
+			<div id="correoElectronicoContainer" class="tr no-display">
+				<div class="td">Correo electrónico:</div>
+				<div class="td"><input type="email" name="email" id="email"/></div>
+			</div>
+			<div id="correoContainer" class="tr no-display">
+				<div class="td">Dirección de correo:</div>
+				<div class="td"><input type="text" name="correo" id="correo"/></div>
+				<div class="td">Localidad:</div>
+				<div class="td"><input type="text" name="localidad" id="localidad"/></div>
+			</div>
+			<div class="tr">
+				<div class="td">Ordene los siguientes temas por orden de prioridad:</div>
+				<div class="td">
+					<ul id="sortable">
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Cine</li>
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Libros</li>
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Deporte</li>
+						<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Juegos</li>
+					</ul>
+				</div>
+			</div>
+		</div>			
+		<div id="contenedorBotones">
+			<button id="aumentar">Aumentar letra</button>
+			<button id="disminuir">Disminuir letra</button>
+			<button id="enviar" type="submit">Enviar</button>
+		</div>	
+	</form>
+</body>
+</html>

@@ -38,11 +38,12 @@ button{
 	max-height: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 
 canvas{
     display: block;
-    margin: 2% auto;	
+    margin-left: 50%;	
 }	
 
 .table{
@@ -86,12 +87,21 @@ canvas{
 	background-color: #20B2AA;
 }
 
+#botonEliminar{
+	background-color: #dc143c;
+}
+
+#botonEliminar:disabled{
+	background-color: #ffd4d4;
+	cursor: not-allowed;
+}
+
 #btnCalcular{
-	
+	background-color: #e4ba49;
 }
 
 #btnEnviar{
-	
+	background-color: #7c9d44;
 }
 
 #graficoContainer{

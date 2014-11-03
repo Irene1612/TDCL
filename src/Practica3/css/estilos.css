@@ -1,0 +1,90 @@
+html, body {
+}
+
+body {
+	color: #1c94c4;
+	background-image: url("images/fondo.jpg");
+}
+
+h1{
+	text-align: center;
+}
+
+table {	
+    border-collapse: collapse;
+    margin: 3% auto;
+}
+
+th, td{
+/* 	border: solid 1px; */
+}
+
+input{
+	border: solid 1px #EF8C08;
+}
+
+button{
+	border-radius: 25px;
+	max-height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+#sortable {
+	list-style-type: none;
+	padding: 0;
+	width: 60%;
+}
+
+#sortable li {
+	margin: 0 3px 3px 3px;
+	padding: 0.4em;
+	padding-left: 1.5em;
+	height: 18px;
+}
+
+#sortable li span {
+	position: absolute;
+	margin-left: -1.3em;
+}
+
+.table{
+	display: table;	
+	width: 75%;
+}
+
+.tr{
+	display: table-row;
+}
+
+.td{
+	display: table-cell;
+	padding: 0 1%;
+}
+
+.no-display{
+	display: none;
+}
+
+.celdaNoBorde{
+	border: none;
+}
+
+.anchoTotal{
+	width: 100%;
+}
+
+.centrado{
+	margin: 0 auto;
+}
+
+.hereda{
+	font-family: inherit;
+	font-size: inherit;
+}
+
+#contenedorBotones{
+	text-align: center;
+}
+

@@ -2,8 +2,6 @@ var numLineasDetalle = 1;
 var numDatos = 4;
 var fechaHoy = new Date();
 
-
-
 function onload() {
 	document.getElementById("fecha").innerHTML = "Fecha: " + fechaHoy.toLocaleDateString();
 	document.getElementById('calendarioFechaLimite').setAttribute("value", fechaHoy.getFullYear() + "-" + ("0" + (fechaHoy.getMonth() + 1)).slice(-2) + "-" +  ("0" + fechaHoy.getDate()).slice(-2));
@@ -62,8 +60,9 @@ function aniadirLinea() {
 	}	
 	contenedor.appendChild(linea);
 	numLineasDetalle++;
-	if(document.getElementById('botonEliminar').disabled == true)
-		document.getElementById('botonEliminar').disabled = false;
+	if(document.getElementById('botonEliminar').disabled == true){
+		document.getElementById('botonEliminar').disabled = false;;
+	}
 }
 
 function eliminarLinea() {      
@@ -119,7 +118,7 @@ function calcular() {
 }
 
 function calcularImporte(i) {
-	document.getElementById("importe" + i).value = parseFloat(document.getElementById("precio" + i).value) * parseInt(document.getElementById("unidades" + i).value);
+	document.getElementById("importe" + i).value = (parseFloat(document.getElementById("precio" + i).value) * parseInt(document.getElementById("unidades" + i).value)).toFixed(2);
 }
 
 function actualizarSubtotal(i) {	
@@ -147,13 +146,13 @@ function crearNuevoCanvas() {
 	}
 	var canvas = document.createElement("canvas");
 	canvas.setAttribute("id", "myChart");
-	canvas.setAttribute("height", 400);
-	canvas.setAttribute("width", 400);
+	canvas.setAttribute("height", 300);
+	canvas.setAttribute("width", 300);
 	document.getElementById("graficoContainer").appendChild(canvas);
 }
 
 function pintarGrafico(total) {
-	Chart.defaults.global.tooltipTemplate = "<%if (label){%><%=label%>: <%}%><%= (value*" + total +")/100  %> €";
+	Chart.defaults.global.tooltipTemplate = "<%if (label){%><%=label%>: <%}%><%= (value*" + parseFloat(total).toFixed(2) +")/100  %> €";
 	var grafico = new Chart(document.getElementById("myChart").getContext("2d")).Pie();
 	for (var i = 0; i < numLineasDetalle; i++) {
 		var color = new Array(Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256));
@@ -167,5 +166,5 @@ function pintarGrafico(total) {
 }
 
 function enviar() {
-	alert("Se han enviado los datos con éxito. (Vamos que falta por hacer esta función xD).");
+	alert("Se han enviado los datos con éxito.");
 }
